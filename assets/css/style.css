@@ -1,0 +1,126 @@
+:root {
+    --theme-color: #0084ff;
+    --text-white: #fff;
+}
+
+body {
+    position: relative;
+}
+
+/* header */
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--theme-color);
+    display: flex;
+    font-size: 3em;
+    height: 2em;
+    padding: 10px 10px;
+    justify-content: space-between;
+    color: var(--text-white);
+}
+
+/* logo */
+.header__Logo {
+    color: var(--text-white) important;
+    display: flex;
+    align-items: center;
+}
+
+/* nav */
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav i + i{
+    margin-left: 10px;
+}
+
+/* search */
+.nav__search {
+    display: none;
+}
+
+.fa-magnifying-glass:hover .nav__search {
+    background-color: var(--theme-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+}
+
+.nav__search button {
+    font-size: 1em;
+}
+
+.nav__search input{
+    font-size: 0.7em;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 70%;
+}
+
+.nav__search button {
+    background-color: transparent;
+    border: none;
+    color: var(--text-white);
+}
+
+
+/* more option */
+.fa-bars .nav__more-opt {
+    display: none;
+    
+}
+
+.fa-bars:hover .nav__more-opt {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 100;
+    background-color: var(--theme-color);
+    width: 100%;
+    text-align: center;
+}
+
+.header__nav ul li {
+    font-size: 0.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px auto;
+    font-weight: 500;
+}
+
+.header__nav ul li a {
+    color: var(--text-white);
+}
+
+/* main */
+
+
+.main {
+    padding-top: 7em;
+}
+
+.main__title {
+    font-size: 3em;
+    display: flex;
+    width: 90%;
+    line-height: 1.7em;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.main__xuat-file {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--theme-color);
+    color: var(--text-white);
+}
