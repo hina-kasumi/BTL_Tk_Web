@@ -33,18 +33,15 @@ body {
     align-items: center;
 }
 
-.header__nav i + i{
-    margin-left: 10px;
+.header__nav div + div{
+    margin-left: 20px;
 }
 
 /* search */
 .nav__search {
-    display: none;
-}
-
-.fa-magnifying-glass:hover .nav__search {
+    display: none; /* in case it hided */
+    /* in case it showed */
     background-color: var(--theme-color);
-    display: flex;
     align-items: center;
     justify-content: space-evenly;
     position: absolute;
@@ -74,14 +71,10 @@ body {
 
 
 /* more option */
-.fa-bars .nav__more-opt {
-    display: none;
-    
-}
-
-.fa-bars:hover .nav__more-opt {
+.nav__more-opt {
+    display: none; /* in case it hided */
+    /* in case it showed */
     padding-top: 20px;
-    display: flex;
     flex-direction: column;
     position: absolute;
     right: 0;
