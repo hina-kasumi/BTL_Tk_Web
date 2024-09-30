@@ -10,7 +10,7 @@ body {
 /* header */
 .header {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     background-color: var(--theme-color);
     display: flex;
     font-size: 3em;
@@ -108,7 +108,7 @@ body {
     width: 90%;
     line-height: 1.7em;
     justify-content: space-between;
-    margin: auto;
+    margin: 20px auto;
 }
 
 .main__xuat-file {
@@ -117,3 +117,22 @@ body {
     background-color: var(--theme-color);
     color: var(--text-white);
 }
+
+/* table */
+.main__table {
+    width: 100%;
+    margin-top: 5em;
+    overflow: scroll;
+}
+
+.main__table table {
+    text-align: center;
+}
+
+.main__table table th,
+.main__table table td {
+    background-color: var(--theme-color);
+    color: var(--text-white);
+    padding: 10px;
+}
+
