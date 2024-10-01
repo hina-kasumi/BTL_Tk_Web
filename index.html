@@ -26,7 +26,7 @@
     <header class="header">
         <!-- Logo -->
         <div class="header__Logo">
-            <a href="./" class="header__Logo">
+            <a href="./index.html" class="header__Logo">
                 <i class="fa-solid fa-house"></i>
                 <p>HelloWorld</p>
             </a>
@@ -48,7 +48,7 @@
             <div class="header__nav__more-opt">
                 <i class="fa-solid fa-bars pop-up-element"></i>
                 <ul class="nav__more-opt">
-                    <li><a href="./">Hóa Đơn</a></li>
+                    <li><a href="./index.html">Hóa Đơn</a></li>
                     <li><a href="./">Thống Kê</a></li>
                     <li><a href="./">Hàng Hóa</a></li>
                     <li><a href="./inner-html/login.html">Đăng Nhập</a></li>
@@ -61,15 +61,14 @@
     <section class="main">
         <div class="main__title">
             <h1 class="title">Hóa Đơn</h1>
-            <button class="main__xuat-file">Xuất File</button>
+            <button onclick="() => {console.log('click');}" class="main__xuat-file">Xuất File</button>
         </div>
 
         <!-- table -->
         <div class="main__table">
             <table>
                 <tr>
-                    <th>STT</th>
-                    <th>Mã Hóa Đơn</th>
+                    <th><input type="checkbox"> Mã Hóa Đơn</th>
                     <th>Ngày Tạo</th>
                     <th>Khách Hàng</th>
                     <th>Trạng Thái</th>
@@ -78,8 +77,16 @@
                     <th>Thao Tác</th>
                 </tr>
                 <tr>
-                    <td>1</td>
-                    <td>#123</td>
+                    <td><input type="checkbox"> #123</td>
+                    <td>28/9/2024</td>
+                    <td>hiếu hiếu</td>
+                    <td>đang giao hàng</td>
+                    <td>100.000.000</td>
+                    <td>90.000.000</td>
+                    <td>chỉnh sửa</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"> #123</td>
                     <td>28/9/2024</td>
                     <td>hiếu hiếu</td>
                     <td>đang giao hàng</td>
@@ -91,6 +98,25 @@
         </div>
     </section>
 
+    <!-- footer -->
+    <footer>
+        <h2><i class="fa-solid fa-house"></i>HelloWorld</h2>
+        <div class="footer__container">
+            <div class="contact">
+                <h3>Liên Hệ</h3>
+                <address style="color: darkblue; font-size: 1.7em;">Địa chỉ: 123 abc xyz</address>
+                <p><a href="tel:0123456789">0123456789</a></p>
+                <p><a href="mailto:email@email.com">email@email.com</a></p>
+            </div>
+            <div class="social-media">
+                <h3>Mạng Xã Hội</h3>
+                <p><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i> HelloWorld</a></p>
+                <p><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i> HelloWorld</a></p>
+                <p><a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i> HelloWorld</a></p>
+            </div>
+        </div>
+
+    </footer>
     <script src="index.js"></script>
 </body>
 

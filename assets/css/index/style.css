@@ -10,7 +10,7 @@ body {
 /* header */
 .header {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     background-color: var(--theme-color);
     display: flex;
     font-size: 3em;
@@ -100,6 +100,7 @@ body {
 
 .main {
     padding-top: 7em;
+    min-height: 90vh;
 }
 
 .main__title {
@@ -122,17 +123,71 @@ body {
 .main__table {
     width: 100%;
     margin-top: 5em;
-    overflow: scroll;
+    overflow-x: scroll;
 }
 
 .main__table table {
     text-align: center;
+    font-size: 1.7em;
 }
 
-.main__table table th,
-.main__table table td {
+.main__table table tr:nth-child(odd) {
+    background-color: #bbbbbb;
+}
+.main__table table tr:nth-child(even) {
+    background-color: #d6d6d6;
+}
+
+.main__table table th {
     background-color: var(--theme-color);
-    color: var(--text-white);
+    padding: 10px;
+
+}
+
+.main__table table td {
     padding: 10px;
 }
 
+td:has(input[type="checkbox"]),
+th:has(input[type="checkbox"]) {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    min-width: 150px;
+    height: 100px;
+}
+
+td>input[type="checkbox"],
+th>input[type="checkbox"] {
+    width: 30%;
+    height: 30%;
+}
+
+/* footer */
+footer {
+    background-color: var(--theme-color);
+    color: var(--text-white);
+    text-align: center;
+    padding: 30px 20px 50px;
+    width: 100%;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 40px auto 0;
+    align-items: center;
+}
+
+.footer__container a {
+    color: darkblue;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.social-media p,
+.contact p {
+    margin-top: 10px;
+}

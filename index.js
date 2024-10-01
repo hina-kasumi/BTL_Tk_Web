@@ -5,7 +5,6 @@ function initPopup() {
         popup[i].addEventListener('click', function () {
             console.log('Phần tử được click là class thứ: ' + i);
             popup[i].nextElementSibling.style.display = (popup[i].nextElementSibling.style.display === 'none') ? 'flex' : 'none';
-            
             // tắt tất cả các popup khác
             for (let j = 0; j < popup.length; j++) {
                 if (j !== i) {
