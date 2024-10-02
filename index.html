@@ -13,7 +13,7 @@
     <!-- style -->
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/index/style.css">
-    <link rel="stylesheet" href="assets/css/index/responsive.css">
+    <link rel="stylesheet" media="(min-width: 1024px)" href="assets/css/index/responsive.css">
 
 
 
@@ -48,27 +48,28 @@
             <div class="header__nav__more-opt">
                 <i class="fa-solid fa-bars pop-up-element"></i>
                 <ul class="nav__more-opt">
-                    <li><a href="./index.html">Hóa Đơn</a></li>
-                    <li><a href="./">Thống Kê</a></li>
-                    <li><a href="./">Hàng Hóa</a></li>
-                    <li><a href="./inner-html/login.html">Đăng Nhập</a></li>
+                    <a href="./index.html"><li>Hóa Đơn</li></a>
+                    <a href="./"><li>Thống Kê</li></a>
+                    <a href="./"><li>Hàng Hóa</li></a>
+                    <a href="./inner-html/login.html"><li>Đăng Nhập</li></a>
                 </ul>
             </div>
         </nav>
     </header>
 
     <!-- section -->
-    <section class="main">
+    <article class="main">
         <div class="main__title">
-            <h1 class="title">Hóa Đơn</h1>
-            <button onclick="() => {console.log('click');}" class="main__xuat-file">Xuất File</button>
+            <h1>Hóa Đơn</h1>
+            <button onclick="() => {console.log('click');}">Xuất File</button>
         </div>
 
         <!-- table -->
         <div class="main__table">
             <table>
                 <tr>
-                    <th><input type="checkbox"> Mã Hóa Đơn</th>
+                    <th><input type="checkbox"> </th>
+                    <th>Mã Hóa Đơn</th>
                     <th>Ngày Tạo</th>
                     <th>Khách Hàng</th>
                     <th>Trạng Thái</th>
@@ -77,7 +78,8 @@
                     <th>Thao Tác</th>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"> #123</td>
+                    <td><input type="checkbox"></td>
+                    <td>#123</td>
                     <td>28/9/2024</td>
                     <td>hiếu hiếu</td>
                     <td>đang giao hàng</td>
@@ -86,7 +88,8 @@
                     <td>chỉnh sửa</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"> #123</td>
+                    <td><input type="checkbox"></td>
+                    <td>#123</td>
                     <td>28/9/2024</td>
                     <td>hiếu hiếu</td>
                     <td>đang giao hàng</td>
@@ -96,19 +99,19 @@
                 </tr>
             </table>
         </div>
-    </section>
+    </article>
 
     <!-- footer -->
     <footer>
         <h2><i class="fa-solid fa-house"></i>HelloWorld</h2>
-        <div class="footer__container">
-            <div class="contact">
+        <div id="footer__container">
+            <div>
                 <h3>Liên Hệ</h3>
                 <address style="color: darkblue; font-size: 1.7em;">Địa chỉ: 123 abc xyz</address>
                 <p><a href="tel:0123456789">0123456789</a></p>
                 <p><a href="mailto:email@email.com">email@email.com</a></p>
             </div>
-            <div class="social-media">
+            <div>
                 <h3>Mạng Xã Hội</h3>
                 <p><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i> HelloWorld</a></p>
                 <p><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i> HelloWorld</a></p>
