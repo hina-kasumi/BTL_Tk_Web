@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <title>Document</title>
+
+    <!-- on phone -->
+    <style>
+        /* header */
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: var(--theme-color);
+            display: flex;
+            font-size: 3em;
+            height: 2em;
+            padding: 10px 10px;
+            justify-content: space-between;
+            color: var(--text-white);
+        }
+
+        /* logo */
+        header>div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header>div a:last-child {
+            display: none;
+        }
+        
+        .header__Logo {
+            color: var(--text-white) important;
+            display: flex;
+            align-items: center;
+        }
+
+        /* nav */
+        .header__nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .header__nav div+div {
+            margin-left: 20px;
+        }
+
+        /* search */
+        .nav__search {
+            /* in case it hided */
+            display: none;
+
+            /* in case it showed */
+            background-color: var(--theme-color);
+            align-items: center;
+            justify-content: space-evenly;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        .nav__search button {
+            font-size: 1em;
+        }
+
+        .nav__search input {
+            font-size: 0.7em;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            width: 70%;
+        }
+
+        .nav__search button {
+            background-color: transparent;
+            border: none;
+            color: var(--text-white);
+        }
+
+
+        /* more option */
+        .nav__more-opt {
+            /* in case it hided */
+            display: none;
+
+            /* in case it showed */
+            padding-top: 20px;
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            background-color: var(--theme-color);
+            width: 100%;
+            text-align: center;
+        }
+
+        .header__nav ul li {
+            font-size: 0.5em;
+            font-weight: 500;
+            color: var(--text-white);
+            margin: 15px auto;
+        }
+
+        .header__nav ul a:hover {
+            background-color: var(--hover-color);
+        }
+    </style>
+
+    <!-- on pc/laptop/tablet -->
+    <style media="(min-width: 640px)">
+        
+        header {
+            color: black;
+            display: block;
+            margin: 5px;
+            padding: 0px;
+            background-color: transparent;
+        }
+        .header__nav {
+            margin-top: 10px;
+            position: static;
+            justify-content: center;
+        }
+
+        /* logo */
+        .header__Logo{
+            padding: 10px;
+            color: var(--theme-color);
+            border: 1px solid var(--theme-color);
+            border-radius: 10px;
+        }
+
+        header>div a:last-child {
+            display: block;
+            margin-right: 20px;
+            color: var(--theme-color);
+            font-size: 0.6em;
+        }
+
+        /* search */
+        .header__nav__search {
+            width: 60%;
+        }
+
+        .header__nav__search>.fa-solid {
+            display: none;
+        }
+
+        .nav__search {
+            position: static;
+            top: 0;
+            display: flex;
+            background-color: transparent;
+            color: var(--theme-color);
+        }
+
+        .nav__search .back-element {
+            display: none;
+        }
+
+        
+        .nav__search input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 2em 0 0 2em;
+            border: 1px solid var(--theme-color);
+        }
+        
+        .nav__search button {
+            background-color: var(--theme-color);
+            padding: 6px 20px;
+            margin-left: -1px;
+            border: none;
+            border-end-end-radius: 2em;
+            border-top-right-radius: 2em;
+        }
+
+        /* more option */
+        .header__nav__more-opt {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Logo -->
+        <div>
+            <a href="/index.html" class="header__Logo">
+                <i class="fa-solid fa-house"></i>
+                <p>HelloWorld</p>
+            </a>
+            <a href="/inner-html/login.html">Đăng Nhập</a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="header__nav">
+            <!-- search -->
+            <div class="header__nav__search">
+                <i class="fa-solid fa-magnifying-glass pop-up-element"></i>
+                <div class="nav__search">
+                    <button class="back-element"><i class="fa-solid fa-arrow-left"></i></button>
+                    <input type="text" placeholder="Tìm kiếm...">
+                    <button><i class="fa-solid fa-search"></i></button>
+                </div>
+            </div>
+
+            <!-- more option -->
+            <div class="header__nav__more-opt">
+                <i class="fa-solid fa-bars pop-up-element"></i>
+                <ul class="nav__more-opt">
+                    <a href="/index.html">
+                        <li>Hóa Đơn</li>
+                    </a>
+                    <a href="./">
+                        <li>Thống Kê</li>
+                    </a>
+                    <a href="./">
+                        <li>Hàng Hóa</li>
+                    </a>
+                    <a href="/inner-html/login.html" id="login">
+                        <li>Đăng Nhập</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script src="/assets/JavaScript/index.js"></script>
+</body>
+
+</html>

@@ -42,9 +42,11 @@ function tickAll() {
 }
 
 function init() {
-    initPopup();
-    initBack();
-    tickAll();
+    if (window.innerWidth < 640) {
+        initPopup();
+        initBack();
+        tickAll();
+    }
 }
 
 init();
