@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/base.css">
+    <!-- <link rel="stylesheet" href="./../css/base.css"> -->
     <title>Document</title>
 
     <!-- on phone -->
     <style>
         /* header */
         header {
-            position: fixed;
+            position: static;
             width: 100%;
             background-color: var(--theme-color);
             display: flex;
             font-size: 3em;
-            height: 2em;
+            height: fit-content;
             padding: 10px 10px;
             justify-content: space-between;
             color: var(--text-white);
@@ -120,6 +120,7 @@
             display: block;
             margin: 5px;
             padding: 0px;
+            height: fit-content;
             background-color: transparent;
         }
         .header__nav {
@@ -155,7 +156,7 @@
         .nav__search {
             position: static;
             top: 0;
-            display: flex;
+            display: flex !important;
             background-color: transparent;
             color: var(--theme-color);
         }
@@ -194,11 +195,11 @@
     <header>
         <!-- Logo -->
         <div>
-            <a href="/index.html" class="header__Logo">
+            <a href="./../../index.html" class="header__Logo">
                 <i class="fa-solid fa-house"></i>
                 <p>HelloWorld</p>
             </a>
-            <a href="/inner-html/login.html">Đăng Nhập</a>
+            <a href="./../../inner-html/login.html">Đăng Nhập</a>
         </div>
 
         <!-- Navigation -->
@@ -226,7 +227,7 @@
                     <a href="./">
                         <li>Hàng Hóa</li>
                     </a>
-                    <a href="/inner-html/login.html" id="login">
+                    <a href="./../../inner-html/login.html" id="login">
                         <li>Đăng Nhập</li>
                     </a>
                 </ul>
@@ -234,7 +235,7 @@
         </nav>
     </header>
 
-    <script src="/assets/JavaScript/index.js"></script>
+    <!-- <script src="./../JavaScript/Navbar.js"></script> -->
 </body>
 
 </html>

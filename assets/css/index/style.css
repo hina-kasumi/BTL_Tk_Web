@@ -8,6 +8,12 @@ body {
     position: relative;
 }
 
+/* header */
+header {
+    position: fixed !important;
+}
+
+
 /* main */
 
 
@@ -67,3 +73,5 @@ td>input[type="checkbox"] {
     height: 20px;
     width: 20px;
 }
+
+/* footer */
