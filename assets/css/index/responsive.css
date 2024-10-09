@@ -5,3 +5,7 @@
 header {
     position: static !important;
 }
+
+#sidebar {
+    display: block;
+}

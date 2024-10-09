@@ -25,50 +25,54 @@
 <body>
     <!-- header -->
     <div id="header"></div>
+    <main>
+        <aside id="sidebar"></aside>
+        
+        <!-- article -->
+        <article class="main">
+            <div class="main__title">
+                <h1>Hóa Đơn</h1>
+                <button onclick="() => {console.log('click');}">Xuất File</button>
+            </div>
 
-    <!-- section -->
-    <article class="main">
-        <div class="main__title">
-            <h1>Hóa Đơn</h1>
-            <button onclick="() => {console.log('click');}">Xuất File</button>
-        </div>
+            <!-- table -->
+            <div class="main__table">
+                <table>
+                    <tr>
+                        <th><input type="checkbox" class="checkboxALL"></th>
+                        <th>Mã Hóa Đơn</th>
+                        <th>Ngày Tạo</th>
+                        <th>Khách Hàng</th>
+                        <th>Trạng Thái</th>
+                        <th>Tổng Tiền</th>
+                        <th>Thành Tiền</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#123</td>
+                        <td>28/9/2024</td>
+                        <td>hiếu hiếu</td>
+                        <td>đang giao hàng</td>
+                        <td>100.000.000</td>
+                        <td>90.000.000</td>
+                        <td>chỉnh sửa</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#123</td>
+                        <td>28/9/2024</td>
+                        <td>hiếu hiếu</td>
+                        <td>đang giao hàng</td>
+                        <td>100.000.000</td>
+                        <td>90.000.000</td>
+                        <td>chỉnh sửa</td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+    </main>
 
-        <!-- table -->
-        <div class="main__table">
-            <table>
-                <tr>
-                    <th><input type="checkbox" class="checkboxALL" ></th>
-                    <th>Mã Hóa Đơn</th>
-                    <th>Ngày Tạo</th>
-                    <th>Khách Hàng</th>
-                    <th>Trạng Thái</th>
-                    <th>Tổng Tiền</th>
-                    <th>Thành Tiền</th>
-                    <th>Thao Tác</th>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>#123</td>
-                    <td>28/9/2024</td>
-                    <td>hiếu hiếu</td>
-                    <td>đang giao hàng</td>
-                    <td>100.000.000</td>
-                    <td>90.000.000</td>
-                    <td>chỉnh sửa</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>#123</td>
-                    <td>28/9/2024</td>
-                    <td>hiếu hiếu</td>
-                    <td>đang giao hàng</td>
-                    <td>100.000.000</td>
-                    <td>90.000.000</td>
-                    <td>chỉnh sửa</td>
-                </tr>
-            </table>
-        </div>
-    </article>
 
     <footer id="footer"></footer>
     <script src="./assets/JavaScript/index.js"></script>
