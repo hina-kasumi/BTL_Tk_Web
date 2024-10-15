@@ -1,0 +1,55 @@
+/* danh sách hàng hóa */
+
+/* trang chính */
+#main__hang-hoa {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* hàng hóa */
+.hang-hoa__item {
+    display: inline-block;
+    --size-block: 200px;
+    --radius: 10px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: var(--size-block);
+    border-radius: var(--radius);
+    margin: 10px;
+    padding: 10px;
+}
+
+.hang-hoa__item img {
+    border-radius: var(--radius);
+    width: 100%;
+    object-fit: cover;
+}
+
+.hang-hoa__item p {
+    margin-top: 2em;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: black;
+
+    display: -webkit-box; /* Sử dụng flexbox cho Webkit */
+    -webkit-box-orient: vertical; /* Hướng theo chiều dọc */
+    -webkit-line-clamp: 3; /* Số dòng tối đa */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Hiện dấu ba chấm */
+}
+
+/* hover */
+.hang-hoa__item:hover {
+    border: 1px solid var(--theme-color);
+}
+
+/* responsive */
+@media screen and (max-width: 639px) {
+    .hang-hoa__item {
+        --size-block: 90%;
+    }
+
+    #main__hang-hoa {
+        width: 100%;
+    }
+}

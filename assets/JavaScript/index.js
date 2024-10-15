@@ -55,13 +55,23 @@ function initSidebar() {
 //khởi tạo
 function init() {
     console.log('index.js loaded');
-    initHeader();
-    tickAll();
-    initFooter();
-    initSidebar();
+
+    safeExecute(initHeader, 'initHeader');
+    safeExecute(tickAll, 'tickAll');
+    safeExecute(initFooter, 'initFooter');
+    safeExecute(initSidebar, 'initSidebar');
 }
 
 //sự kiện DOMContentLoaded xảy ra khi toàn bộ HTML đã được load xong
 document.addEventListener("DOMContentLoaded", function () {
     init();
 });
+
+
+function safeExecute(fn, name) {
+    try {
+        fn();
+    } catch (error) {
+        console.error(`Lỗi trong ${name}:`, error);
+    }
+}
