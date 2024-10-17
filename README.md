@@ -28,7 +28,11 @@
 ---
 
 ## clone lại dự án thì dùng
-    git clone https://github.com/hina-kasumi/BTL_Tk_Web.git
+      git clone https://github.com/hina-kasumi/BTL_Tk_Web.git
+
+## tải môi trường để chạy dự án
+      npm install --save @fortawesome/fontawesome-free
+      npm install bootstrap@5.2.3
 
 
 Nếu bạn có bất kỳ câu hỏi nào, hãy liên hệ với **hina-kasumi** (aka: hiếu hiếu).

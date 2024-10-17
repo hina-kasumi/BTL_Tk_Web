@@ -1,56 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
+    <!-- test -->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./../css/base.css"> -->
-    <title>Document</title>
-    <style>
-        #sidebar__nav {
-            text-align: center;
-            font-size: 2em;
-            display: inline-block;
-        }
-
-        .sidebar__nav__list__item {
-            color: var(--text-white);
-            padding: 2em 3em;
-            background-color: var(--theme-color);
-        }
-        
-        a:not(:first-child) .sidebar__nav__list__item {
-            border-top: 1px solid rgba(0, 0, 0, 0.2);
-        }
-
-        .sidebar__nav__list__item:hover {
-            background-color: var(--hover-color);
-        }
-    </style>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-    <!-- Sidebar -->
-    <aside id="sidebar">
-        <!-- Navigation -->
-        <nav id="sidebar__nav">
-            <ul id="sidebar__nav__list">
-                <a href="/index.html">
-                    <li class="sidebar__nav__list__item">Hóa Đơn</li>
-                </a>
-                <a href="./">
-                    <li class="sidebar__nav__list__item">Thống Kê</li>
-                </a>
-                <a href="./HangHoa.html">
-                    <li class="sidebar__nav__list__item">Hàng Hóa</li>
-                </a>
-                <a href="./inner-html/login.html">
-                    <li class="sidebar__nav__list__item">Đăng Nhập</li>
-                </a>
-            </ul>
-        </nav>
-    </aside>
-    <!-- End Sidebar -->
+<aside class="d-none d-md-block">
+    <h4 class="mt-4 mb-5 text-center">
+        <i class="fa-solid fa-house text-theme"></i>
+        HelloWorld
+    </h4>
+    <a href=""><div class="rounded-4 current-page">Trang Chủ</div></a>
+    <a href=""><div class="rounded-4">Hóa đơn</div></a>
+    <a href=""><div class="rounded-4">Thống kê</div></a>
+    <a href=""><div class="rounded-4">Hàng hóa</div></a>
+    <hr class="mx-4">
+    <a href=""><div class="rounded-4">Trung Tâm Trợ Giúp</div></a>
+    <a href=""><div class="rounded-4">Cài đặt</div></a>
+</aside>
 </body>
 
 </html>

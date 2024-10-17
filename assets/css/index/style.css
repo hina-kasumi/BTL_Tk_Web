@@ -1,48 +1,15 @@
 :root {
-    --theme-color: #0084ff;
-    --text-white: #fff;
-    --hover-color: #0056b3;
+    --primary-color: #00b0f0;
 }
 
-
-/* table */
-.main__table {
-    width: 100%;
-    margin-top: 5em;
-    overflow-x: auto;
+* {
+    box-sizing: border-box;
 }
 
-.main__table table {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.7em;
+.bg-theme {
+    background: var(--primary-color);
 }
 
-.main__table table tr {
-    height: 3em;
-}
-
-.main__table table tr:nth-child(odd) {
-    background-color: #bbbbbb;
-}
-
-.main__table table tr:nth-child(even) {
-    background-color: #d6d6d6;
-}
-
-.main__table table th {
-    background-color: var(--theme-color);
-    padding: 10px;
-
-}
-
-.main__table table td {
-    padding: 10px;
-}
-
-th>input[type="checkbox"],
-td>input[type="checkbox"] {
-    height: 20px;
-    width: 20px;
+.text-theme {
+    color: var(--primary-color);
 }

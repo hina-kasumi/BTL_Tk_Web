@@ -1,63 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
+    <!-- test -->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- <link rel="stylesheet" href="./../css/base.css"> -->
-    <title>Document</title>
-
-    <style>
-        /* footer */
-        footer {
-            background-color: var(--theme-color);
-            color: var(--text-white);
-            text-align: center;
-            padding: 30px 20px 50px;
-            width: 100%;
-            margin-bottom: 0;
-        }
-
-        #footer__container {
-            display: flex;
-            justify-content: space-between;
-            width: 80%;
-            margin: 40px auto 0;
-            align-items: center;
-        }
-
-        #footer__container a {
-            color: darkblue;
-            font-size: 1.5em;
-            text-decoration: underline;
-        }
-
-        #footer__container p {
-            margin-top: 10px;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- footer -->
-    <footer>
-        <h2><i class="fa-solid fa-house"></i>HelloWorld</h2>
-        <div id="footer__container">
-            <div>
-                <h3>Liên Hệ</h3>
-                <address style="color: darkblue; font-size: 1.7em;">Địa chỉ: 123 abc xyz</address>
-                <p><a href="tel:0123456789">0123456789</a></p>
-                <p><a href="mailto:email@email.com">email@email.com</a></p>
-            </div>
-            <div>
-                <h3>Mạng Xã Hội</h3>
-                <p><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i> HelloWorld</a></p>
-                <p><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i> HelloWorld</a></p>
-                <p><a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i> HelloWorld</a></p>
-            </div>
-        </div>
-    </footer>
+<footer class="row row-cols-1 row-cols-md-2 mx-auto px-md-5 container text-light">
+    <div class="col text-center text-md-start">
+        <p>
+            <i class="fa-solid fa-location-dot me-3"></i>
+            Trường Đại Học Giao Thông Vận Tải
+        </p>
+        <address>Hà Nội, Việt Nam</address>
+        <p>
+            <i class="fa-solid fa-phone-volume me-3"></i>SDT:
+            <a href="tel:+84241234567" class="text-dark">+84241234567</a>
+        </p>
+        <p>
+            <i class="fa-solid fa-envelope me-3"></i>Email:
+            <a href="mailto:helloworld@gmail.com" class="text-dark">helloworld@gmail.com</a>
+        </p>
+    </div>
+    <div class="col text-center text-md-start">
+        <h4>Liên hệ</h4>
+        <p>Bạn có thể liên hệ với chúng tôi qua những trang sau</p>
+        <p class="h5">
+            <a href="" class="text-dark"><i class="fa-brands fa-facebook"></i></a>
+            <a href="" class="text-dark"><i class="fa-brands fa-instagram"></i></a>
+            <a href="" class="text-dark"><i class="fa-brands fa-x-twitter"></i></a>
+        </p>
+    </div>
+</footer>
 </body>
 
 </html>

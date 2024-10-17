@@ -1,0 +1,38 @@
+/*sidebar*/
+#sidebar {
+    background: #f0f0f0;
+    height: 100%;
+    font-weight: 100;
+}
+
+#sidebar > aside > h4 {
+    font-size: 2rem;
+}
+
+.current-page {
+    background: var(--bs-dark)!important;
+    color: var(--bs-light) !important;
+}
+
+#sidebar > aside > a > div {
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+    margin: 1.5rem 2rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+#sidebar > aside > a {
+    text-decoration: none ;
+    color: inherit;
+}
+
+#sidebar > aside > a:hover > div {
+    background: var(--bs-gray-dark);
+    color: var(--bs-light);
+}
+
+/*footer*/
+#footer {
+    background: #00b0f0;
+    font-weight: 500;
+}
