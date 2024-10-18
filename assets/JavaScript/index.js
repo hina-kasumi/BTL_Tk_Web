@@ -1,6 +1,6 @@
 //tạo sidebar
 function initSidebar() {
-    fetch('./assets/components/sidebar.html')
+    fetch('/assets/components/sidebar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('sidebar').innerHTML = data;
@@ -10,7 +10,7 @@ function initSidebar() {
 
 //tạo footer
 function initFooter() {
-    fetch('./assets/components/footer.html')
+    fetch('/assets/components/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer').innerHTML = data;
@@ -22,7 +22,7 @@ function initFooter() {
 
 //tạo header
 function initHeader() {
-    fetch('./assets/components/navbar.html')
+    fetch('/assets/components/navbar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header').innerHTML = data;

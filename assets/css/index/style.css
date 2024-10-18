@@ -1,15 +1,27 @@
-:root {
-    --primary-color: #00b0f0;
+/*main content*/
+.main-content > ul > a {
+    background: #f7f7f7;
 }
 
-* {
-    box-sizing: border-box;
+ul:has(.element) {
+    gap: 2rem 8vw;
 }
 
-.bg-theme {
-    background: var(--primary-color);
+.element {
+    color: var(--bs-dark);
+    padding: 1rem;
+    border-radius: var(--bs-border-radius-xl);
+    border: 1px solid var(--bs-dark);
+    transition: background 0.2s;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.text-theme {
-    color: var(--primary-color);
+.element hr {
+    margin-top: 0.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.element:hover {
+    background: #707070;
+    color: var(--bs-light);
 }

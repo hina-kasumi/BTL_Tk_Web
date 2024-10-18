@@ -1,0 +1,32 @@
+:root {
+    --primary-color: #00b0f0;
+}
+
+.main-content {
+    min-height: 70vh;
+}
+
+.title,
+.description {
+    margin: 1rem 2rem;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.main-content {
+    margin: 3rem 2rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-theme {
+    background: var(--primary-color);
+}
+
+.text-theme {
+    color: var(--primary-color);
+}

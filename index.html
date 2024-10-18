@@ -14,8 +14,11 @@
     <!-- style -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/index/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/stylecomponents/conponents.css">
+    <link rel="stylesheet" href="./assets/css/index/style.css">
+    <!--responsive-->
+    <link rel="stylesheet" href="./assets/css/index/responsive.css">
 
     <!-- title favicon -->
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
@@ -23,10 +26,71 @@
 </head>
 
 <body>
+
+<!--aside and main-content-->
 <div class="d-flex">
-    <aside id="sidebar"></aside>
+    <!--aside-->
+    <aside id="sidebar" class="d-none d-md-block shadow"></aside>
+
+    <!--content-->
     <div class="flex-fill">
-        main
+        <h2 class="title">Quản lý hóa đơn bán hàng</h2>
+        <p class="description">Chào mừng bạn đến với giao diện quản lý hóa đơn bán hàng. Cùng bắt đầu làm việc với những tiện ích của chúng tôi</p>
+        <section class="main-content">
+            <!-- list box -->
+            <ul class="list-unstyled d-flex flex-column flex-md-row flex-wrap">
+                <a href="./inner-html/HoaDon.html" class="element text-decoration-none">
+                    <li>
+                        <div></div>
+                        <div>
+                            <h3>Quản lý hóa đơn</h3>
+                            <hr>
+                            <p>Quản lý hóa đơn của bạn dễ dàng</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="./inner-html/ThongKe.html" class="element text-decoration-none">
+                    <li>
+                        <div></div>
+                        <div>
+                            <h3>Thống kê số liệu</h3>
+                            <hr>
+                            <p>Phân tích và thống kê hóa đơn</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="./inner-html/SanPham.html" class="element text-decoration-none">
+                    <li>
+                        <div></div>
+                        <div>
+                            <h3>Sản phẩm</h3>
+                            <hr>
+                            <p>Những sản phẩm bạn đang bán</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="./inner-html/TrungTamTroGiup.html" class="element text-decoration-none">
+                    <li>
+                        <div></div>
+                        <div>
+                            <h3>Trợ giúp</h3>
+                            <hr>
+                            <p>Hãy liên hệ với chúng tôi nếu gặp khó khăn</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="./inner-html/CaiDat.html" class="element text-decoration-none">
+                    <li>
+                        <div></div>
+                        <div>
+                            <h3>Cài đặt</h3>
+                            <hr>
+                            <p>cài đặt giao diện theo gu của bạn</p>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </section>
     </div>
 </div>
 <footer id="footer" class="bg-theme p-4"></footer>
