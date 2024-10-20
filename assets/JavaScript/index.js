@@ -18,20 +18,18 @@ function initFooter() {
         .catch(error => console.error("Lỗi tải footer:", error));
 }
 
-
-
-//tạo header
-function initHeader() {
-    fetch('./assets/components/navbar.html')
+//tạo main content
+function initMain (filename){
+    fetch('./' + filename)
         .then(response => response.text())
         .then(data => {
-            document.getElementById('header').innerHTML = data;
-
-            const script = document.createElement("script"); // tạo thẻ script cho navbar
-            script.src = "./assets/JavaScript/Navbar.js"; // đường dẫn đến file Navbar.js
-            document.body.appendChild(script); // thêm script vào body
+            document.getElementById('footer').innerHTML = data;
         })
-        .catch(error => console.error("Lỗi tải navbar:", error));
+        .catch(error => console.log("Lỗi tải main", error));
+}
+
+function currentPage (activePage) {
+
 }
 
 function init(){
