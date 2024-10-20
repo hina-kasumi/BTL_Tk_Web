@@ -3,7 +3,7 @@
 /*sidebar*/
 #sidebar {
     background: #f0f0f0;
-    min-width: 270px;
+    min-width: 300px;
     font-weight: 100;
 }
 
@@ -12,24 +12,25 @@
 }
 
 .current-page {
-    background: var(--bs-dark)!important;
+    background: var(--bs-dark) !important;
     color: var(--bs-light) !important;
 }
 
-#sidebar > aside > a > div {
+#sidebar > aside > div {
     font-size: 1.2rem;
     padding: 0.5rem 2rem;
     margin: 1.5rem 2rem;
-    border-radius:var(--bs-border-radius-xl);
+    border-radius: var(--bs-border-radius-xl);
     transition: background 0.2s, color 0.2s;
+    cursor: pointer;
 }
 
 #sidebar > aside > a {
-    text-decoration: none ;
+    text-decoration: none;
     color: inherit;
 }
 
-#sidebar > aside > a:hover > div {
+#sidebar > aside > div:hover {
     background: var(--bs-gray-dark);
     color: var(--bs-light);
 }
