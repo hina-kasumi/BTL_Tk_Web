@@ -3,7 +3,7 @@
 /*sidebar*/
 #sidebar {
     background: #f0f0f0;
-    min-width: 270px;
+    min-width: 300px;
     font-weight: 100;
 }
 
@@ -36,6 +36,7 @@
 
 /*footer*/
 #footer {
-    background: #00b0f0;
+    padding:1.5rem;
+    background: var(--primary-color);
     font-weight: 500;
 }

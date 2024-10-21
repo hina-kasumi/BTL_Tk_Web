@@ -1,0 +1,21 @@
+.main-content button {
+    padding: 10px 20px;
+}
+
+.main-content button:hover {
+    background: var(--secondary-color);
+}
+body {
+    overflow-x: hidden;
+}
+.main-content a {
+    /*float: right;*/
+    margin-bottom: 1rem;
+}
+
+table {
+    /*min-width: 650px !important;*/
+}
+.data {
+    overflow-x: auto;
+}

@@ -1,5 +1,13 @@
 :root {
     --primary-color: #00b0f0;
+    --secondary-color: #0088ba;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .main-content {
@@ -17,10 +25,6 @@
 
 .main-content {
     margin: 3rem 2rem;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .bg-theme {
