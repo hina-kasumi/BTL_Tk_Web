@@ -31,8 +31,8 @@ function currentPage() {
     const current = currentUrl[currentUrl.length - 1].split('.')[0];
     console.log(current);
     document.querySelector('.current-page').classList.remove('current-page');
-    console.log(document.getElementsByClassName(current)[0])
-   document.getElementsByClassName(current)[0].classList.add('current-page');
+    document.getElementsByClassName(current ? current : 'index')[0].classList.add('current-page');
+    console.log(document.getElementsByClassName(current)[0]);
 }
 
 async function init() {
@@ -40,6 +40,7 @@ async function init() {
     await initFooter();
     await currentPage();
 }
+
 window.addEventListener('DOMContentLoaded', init);
 
 
