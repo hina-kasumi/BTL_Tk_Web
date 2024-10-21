@@ -20,7 +20,7 @@ a:has(.items) {
 }
 
 .items:hover {
-    background: var(--bs-gray-200);
+    background: var(--bs-gray-200)!important;
 }
 
 .items__img {

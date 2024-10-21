@@ -20,12 +20,16 @@ ul:has(.element) {
     margin-right: 1rem;
 }
 
+.element h3 {
+    min-font-size: 2rem;
+}
+
 .element hr {
     margin-top: 0.1rem;
     margin-bottom: 0.5rem;
 }
 
 .element:hover {
-    background: #707070;
-    color: var(--bs-light);
+    background: #707070 !important;
+    color: var(--bs-light) !important;
 }

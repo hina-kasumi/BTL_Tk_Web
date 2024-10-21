@@ -5,15 +5,9 @@ async function initSidebar() {
 }
 
 //tạo footer
-function initFooter() {
-    fetch('./assets/components/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            console.log("1")
-            document.getElementById('footer').innerHTML = data;
-        })
-        .catch(error => console.error("Lỗi tải footer:", error));
-    console.log("2");
+async function initFooter() {
+    const response = await fetch('./assets/components/footer.html');
+    document.getElementById('footer').innerHTML = await response.text();
 }
 
 //tạo main content
@@ -27,12 +21,10 @@ function initMain(filename) {
 }
 
 function currentPage() {
-    const currentUrl = window.location.href.split('/');
-    const current = currentUrl[currentUrl.length - 1].split('.')[0];
-    console.log(current);
+    const currentUrl = window.location.href.split('/'); //lấy tên miền
+    const current = currentUrl[currentUrl.length - 1].split('.')[0]; // bỏ .html
     document.querySelector('.current-page').classList.remove('current-page');
     document.getElementsByClassName(current ? current : 'index')[0].classList.add('current-page');
-    console.log(document.getElementsByClassName(current)[0]);
 }
 
 async function init() {
@@ -42,6 +34,37 @@ async function init() {
 }
 
 window.addEventListener('DOMContentLoaded', init);
+
+
+function activeDarkMode () {
+    if (localStorage.getItem('mode') === 'dark-mode') {
+        const link = document.createElement('link');// Tạo một thẻ <link>
+        // Thiết lập thuộc tính cho thẻ <link>
+        link.rel = 'stylesheet';
+        link.href = './assets/css/DarkMode/DarkMode.css';
+
+        document.head.appendChild(link);// Thêm thẻ <link> vào phần <head>
+    }
+}
+
+window.addEventListener('DOMContentLoaded', activeDarkMode);
+
+function darkMode () {
+    console.log('clicked')
+    if (localStorage.getItem('mode') !== 'dark-mode') {
+        localStorage.setItem('mode', 'dark-mode');
+        activeDarkMode();
+    }
+    else {
+        localStorage.removeItem('mode');
+        removeDarkMode();
+    }
+}
+
+function removeDarkMode () {
+    const lastChild = document.head.lastElementChild;
+    lastChild.remove();
+}
 
 
 function tickAll() {

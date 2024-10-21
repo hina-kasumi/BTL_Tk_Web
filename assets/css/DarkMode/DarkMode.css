@@ -1,0 +1,50 @@
+/*component*/
+#sidebar, .flex-fill {
+    background-color: var(--bs-dark) !important;
+    color: var(--bs-light) !important;
+}
+
+.current-page {
+    background-color: var(--bs-light) !important;
+    color: var(--bs-dark) !important;
+}
+
+#footer {
+    background-color: var(--secondary-color) !important;
+}
+
+/*index*/
+.element,
+.items{
+    background-color: #151515 !important;
+    color: var(--bs-light) !important;
+    border-color: var(--bs-light) !important;
+}
+
+.element:hover {
+    background-color: var(--bs-gray) !important;
+}
+
+.items__head {
+    color: var(--bs-light) !important;
+}
+
+.items:hover {
+    background-color: var(--bs-gray-800) !important;
+}
+
+/*đơn hàng*/
+table.table {
+    --bs-table-color: #fff;
+    --bs-table-bg: #212529;
+    --bs-table-border-color: #373b3e;
+    --bs-table-striped-bg: #2c3034;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #373b3e;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #323539;
+    --bs-table-hover-color: #fff;
+    color: var(--bs-table-color);
+    border-color: var(--bs-table-border-color)
+}
+

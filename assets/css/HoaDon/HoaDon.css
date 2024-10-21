@@ -11,10 +11,6 @@
     margin-bottom: 1rem;
 }
 
-html {
-    overflow-x: hidden;
-}
-
 table {
     min-width: 650px !important;
 }
@@ -26,6 +22,12 @@ section {
 }
 .data {
     overflow-x: auto;
+}
+
+td:first-child,
+th:first-child {
+    text-align: center;
+    vertical-align: middle;
 }
 
 input[type="checkbox"]{
