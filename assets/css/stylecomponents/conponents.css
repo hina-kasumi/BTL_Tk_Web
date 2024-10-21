@@ -4,6 +4,7 @@
 #sidebar {
     background: #f0f0f0;
     min-width: 300px;
+    max-width: 300px;
     font-weight: 100;
 }
 

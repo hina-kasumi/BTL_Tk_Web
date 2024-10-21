@@ -1,0 +1,43 @@
+.main-content {
+    display: grid;
+    gap: 10px;
+}
+
+
+a:has(.items) {
+    text-decoration: none;
+    height: 20rem;
+}
+
+.items {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: var(--bs-gray-100);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.items:hover {
+    background: var(--bs-gray-200);
+}
+
+.items__img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+    width: 100%;
+    height: 10rem;
+}
+
+.items__head {
+    color: var(--bs-dark);
+}
+
+.items__price {
+    font-size: 1.3em;
+    position: absolute;
+    bottom: 0;
+    color: var(--primary-color);
+}
