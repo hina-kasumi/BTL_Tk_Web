@@ -4,6 +4,10 @@
     color: var(--bs-light) !important;
 }
 
+#sidebar {
+    border-right: 1px solid var(--bs-light) !important;
+}
+
 .current-page {
     background-color: var(--bs-light) !important;
     color: var(--bs-dark) !important;
@@ -13,9 +17,13 @@
     background-color: var(--secondary-color) !important;
 }
 
+#footer a {
+    color: black !important;
+}
+
 /*index*/
 .element,
-.items{
+.items {
     background-color: #151515 !important;
     color: var(--bs-light) !important;
     border-color: var(--bs-light) !important;
@@ -48,3 +56,41 @@ table.table {
     border-color: var(--bs-table-border-color)
 }
 
+table.table th {
+    background-color: var(--secondary-color) !important;
+}
+
+/*cài đặt*/
+#theme-btn {
+    color: var(--bs-gray-dark);
+    background: var(--bs-light);
+}
+
+/*trợ giúp*/
+.danh-muc-items {
+    border: 1px solid var(--bs-light);
+}
+
+.accordion-header > button {
+    background-color: var(--primary-color)!important;
+    color: var(--bs-light) !important;
+}
+
+.accordion-header > .collapsed {
+    background: var(--secondary-color) !important;
+}
+
+.accordion-body {
+    background-color: var(--bs-gray-800)!important;
+    color: var(--bs-light) !important;
+}
+
+form input,
+form textarea {
+    background-color: var(--bs-gray-800)!important;
+    color: var(--bs-light) !important;
+}
+
+form input[type="submit"] {
+    border-color: var(--bs-light);
+}

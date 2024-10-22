@@ -1,0 +1,52 @@
+section .container + .container {
+    margin-top: 2rem;
+}
+
+.danh-muc {
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.danh-muc-items {
+    text-align: center;
+    vertical-align: center;
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid black;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.danh-muc-items:hover {
+    background: var(--bs-gray-200);
+}
+
+@media (min-width: 576px) {
+    .danh-muc-items {
+        width: 48.4%;
+    }
+}
+
+@media (min-width: 900px) {
+    .danh-muc-items {
+        width: 32% !important;
+    }
+}
+
+#submit-ques textarea {
+    height: 10rem !important;
+    resize: none !important;
+}
+
+form input[type="submit"] {
+    float: right;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--bs-dark);
+}

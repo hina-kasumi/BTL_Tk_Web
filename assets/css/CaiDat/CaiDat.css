@@ -1,0 +1,21 @@
+.part-setting {
+    margin-bottom: 2rem;
+}
+
+.part-setting label {
+    margin-right: 1rem;
+    font-size: 1.3rem;
+}
+
+#theme-btn {
+    border-radius: 1rem;
+    background: var(--bs-gray-dark);
+    color: var(--bs-light);
+    width: 6rem;
+    height: 2.5rem;
+    border: none;
+}
+
+#theme-btn:hover {
+    background: var(--bs-gray-600);
+}

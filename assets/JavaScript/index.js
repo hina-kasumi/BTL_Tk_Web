@@ -23,20 +23,27 @@ function initMain(filename) {
 function currentPage() {
     const currentUrl = window.location.href.split('/'); //lấy tên miền
     const current = currentUrl[currentUrl.length - 1].split('.')[0]; // bỏ .html
-    document.querySelector('.current-page').classList.remove('current-page');
+
+    const curr = document.querySelector('.current-page');
+    if (curr)
+        curr.classList.remove('current-page');
     document.getElementsByClassName(current ? current : 'index')[0].classList.add('current-page');
 }
 
+// khởi tạo các thành phần cân thiết
 async function init() {
     await initSidebar();
     await initFooter();
     await currentPage();
 }
-
 window.addEventListener('DOMContentLoaded', init);
 
 
-function activeDarkMode () {
+// dark mode feature
+window.addEventListener('DOMContentLoaded', activeDarkMode);
+function activeDarkMode() {
+    const themeBtn = document.getElementById('theme-btn');
+    document.getElementById('light-btn')
     if (localStorage.getItem('mode') === 'dark-mode') {
         const link = document.createElement('link');// Tạo một thẻ <link>
         // Thiết lập thuộc tính cho thẻ <link>
@@ -44,27 +51,34 @@ function activeDarkMode () {
         link.href = './assets/css/DarkMode/DarkMode.css';
 
         document.head.appendChild(link);// Thêm thẻ <link> vào phần <head>
+        if (themeBtn) {
+            themeBtn.innerHTML = 'Sáng';
+        }
+    } else if (themeBtn) {
+        themeBtn.innerHTML = 'Tối';
     }
 }
 
-window.addEventListener('DOMContentLoaded', activeDarkMode);
+function removeDarkMode() {
+    const lastChild = document.head.lastElementChild;
+    lastChild.remove();
 
-function darkMode () {
-    console.log('clicked')
+    // change btn
+    const themeBtn = document.getElementById('theme-btn');
+    themeBtn.innerHTML = 'Tối';
+}
+
+function darkMode() {
     if (localStorage.getItem('mode') !== 'dark-mode') {
         localStorage.setItem('mode', 'dark-mode');
         activeDarkMode();
-    }
-    else {
+    } else {
         localStorage.removeItem('mode');
         removeDarkMode();
     }
 }
 
-function removeDarkMode () {
-    const lastChild = document.head.lastElementChild;
-    lastChild.remove();
-}
+// end dark mode feature
 
 
 function tickAll() {
