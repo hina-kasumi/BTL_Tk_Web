@@ -1,4 +1,64 @@
 /*navbar*/
+.navbar-container {
+    height: 4rem;
+}
+#navbar {
+    background-color: var(--bs-gray-100);
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+nav .fa-solid{
+    font-size: 2rem;
+    padding: 0.25rem 0.5rem !important;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+}
+#search-bar {
+    width: 50%;
+    min-width: 300px;
+}
+
+#search-bar input {
+    background-color: var(--bs-light) !important;
+}
+
+#search-bar > a {
+    border-color: black!important;
+    color: black !important;
+}
+.category {
+    display: none;
+}
+
+.active {
+    display: block!important;
+}
+
+.category__items > li{
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-top: 1px solid black;
+    color: var(--bs-dark);
+}
+.category__items:first-child > li {
+    border: none;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .navbar-container {
+        height: fit-content;
+    }
+    #navbar {
+        position: initial;
+    }
+}
 
 /*sidebar*/
 #sidebar {

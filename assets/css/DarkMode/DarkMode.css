@@ -1,4 +1,22 @@
 /*component*/
+/*navbar*/
+#navbar {
+    background-color: var(--bs-dark);
+}
+
+nav .fa-solid {
+    border-color: var(--bs-light);
+}
+#search-bar > a {
+    border-color: var(--bs-light)!important;
+    color: var(--bs-light)!important;
+}
+.category__items > li {
+    color: var(--bs-light)!important;
+    border-color: var(--bs-gray);
+}
+
+/*sidebar*/
 #sidebar, .flex-fill {
     background-color: var(--bs-dark) !important;
     color: var(--bs-light) !important;
@@ -13,6 +31,7 @@
     color: var(--bs-dark) !important;
 }
 
+/*footer*/
 #footer {
     background-color: var(--secondary-color) !important;
 }

@@ -1,23 +1,7 @@
-//tạo sidebar
-async function initSidebar() {
-    const response = await fetch('./assets/components/sidebar.html');
-    document.getElementById('sidebar').innerHTML = await response.text();
-}
-
-//tạo footer
-async function initFooter() {
-    const response = await fetch('./assets/components/footer.html');
-    document.getElementById('footer').innerHTML = await response.text();
-}
-
-//tạo main content
-function initMain(filename) {
-    fetch('./' + filename)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        })
-        .catch(error => console.log("Lỗi tải main", error));
+//tạo components
+async function initComponent(component, where) {
+    const response = await fetch('./assets/components/' + component + '.html');
+    document.getElementById(where).innerHTML = await response.text();
 }
 
 function currentPage() {
@@ -32,18 +16,20 @@ function currentPage() {
 
 // khởi tạo các thành phần cân thiết
 async function init() {
-    await initSidebar();
-    await initFooter();
+    await initComponent('navbar', 'navbar');
+    await initComponent('sidebar', 'sidebar');
+    await initComponent('footer', 'footer');
     await currentPage();
 }
+
 window.addEventListener('DOMContentLoaded', init);
 
 
 // dark mode feature
 window.addEventListener('DOMContentLoaded', activeDarkMode);
+
 function activeDarkMode() {
     const themeBtn = document.getElementById('theme-btn');
-    document.getElementById('light-btn')
     if (localStorage.getItem('mode') === 'dark-mode') {
         const link = document.createElement('link');// Tạo một thẻ <link>
         // Thiết lập thuộc tính cho thẻ <link>
@@ -65,7 +51,8 @@ function removeDarkMode() {
 
     // change btn
     const themeBtn = document.getElementById('theme-btn');
-    themeBtn.innerHTML = 'Tối';
+    if (themeBtn)
+        themeBtn.innerHTML = 'Tối';
 }
 
 function darkMode() {
@@ -80,6 +67,26 @@ function darkMode() {
 
 // end dark mode feature
 
+// khi là điện loại sẽ hiện list để chọn
+function activeCategory() {
+    const element = document.querySelector('.category');
+    const active = document.querySelector('.active');
+    if (active)
+        element.classList.remove('active');
+    else
+        element.classList.add('active');
+}
+
+// khi thay đổi màn hình thì sẽ bỏ hiển thị
+function removeActiveCategory() {
+    if (window.innerWidth >= 768) {
+        const element = document.querySelector('.category');
+        if (document.querySelector('.active'))
+            element.classList.remove('active');
+    }
+}
+window.addEventListener('resize', removeActiveCategory);
+
 
 function tickAll() {
     const checkBox = document.querySelectorAll('input[type="checkbox"]');
@@ -87,3 +94,4 @@ function tickAll() {
         checkBox[checkBoxKey].checked = checkBox[0].checked;
     }
 }
+

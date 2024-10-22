@@ -1,12 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
 </head>
 <body>
-
-
+<nav class="border-bottom py-2 mx-1">
+    <div class="d-flex justify-content-between align-items-center">
+        <i class="fa-solid fa-bars d-md-none" onclick="activeCategory()"></i>
+        <div id="search-bar" class="d-flex mx-auto">
+            <input type="search" name="search" id="search" placeholder="Tìm kiếm" class="rounded ps-2 py-1 me-1 flex-fill">
+            <a href="" class="border p-1 rounded border-2">Tìm kiếm</a>
+        </div>
+        <i class="fa-solid fa-circle-half-stroke" onclick="darkMode()"></i>
+    </div>
+    <div class="category">
+        <ul class="list-unstyled">
+            <a href="index.html" class="category__items">
+                <li>Trang chủ</li>
+            </a>
+            <a href="HoaDon.html" class="category__items">
+                <li>Quản lý hóa đơn</li>
+            </a>
+            <a href="ThongKe.html" class="category__items">
+                <li>Thống kê số liệu</li>
+            </a>
+            <a href="SanPham.html" class="category__items">
+                <li>Sản phẩm</li>
+            </a>
+            <a href="TrungTamTroGiup.html" class="category__items">
+                <li>Trợ giúp</li>
+            </a>
+            <a href="CaiDat.html" class="category__items">
+                <li>Cài đặt</li>
+            </a>
+        </ul>
+    </div>
+</nav>
 </body>
 </html>
