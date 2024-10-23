@@ -26,7 +26,7 @@ function overflowData(command) {
 
     // hiển thị dữ liệu cần hiện và ẩn dữ liệu cần ẩn
     for (let i = index * maxData - maxData; i <= (index + 1) * maxData + maxData; i++) {
-        console.log(i);
+        // console.log(i);
         if (i >= 0 && i < data.length) {
             if (i >= index * maxData && i < maxData * (index + 1))
                 data[i].style.display = 'table-row';

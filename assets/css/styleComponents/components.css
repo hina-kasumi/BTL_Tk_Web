@@ -53,6 +53,10 @@ input[type="search"] {
     margin-top: 0.5rem;
 }
 
+.category__items:hover > li {
+    background-color: var(--bs-gray-500);
+}
+
 #search-bar-sm {
     left: 0.25rem;
     right: 0.25rem;

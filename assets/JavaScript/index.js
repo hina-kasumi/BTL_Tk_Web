@@ -69,19 +69,19 @@ function darkMode() {
 // khi là điện loại sẽ hiện list để chọn
 function activeCategory() {
     const element = document.querySelector('.category');
-    if (element.classList.contains('d-block'))
-        element.classList.remove('d-block');
+    if (element.classList.contains('active'))
+        element.classList.remove('active');
     else {
         removeOtherActive();
-        element.classList.add('d-block');
+        element.classList.add('active');
     }
 }
 
 // khi thay đổi màn hình thì sẽ bỏ hiển thị
 function removeActiveCategory() {
     const element = document.querySelector('.category');
-    if (element.classList.contains('d-block'))
-        element.classList.remove('d-block');
+    if (element.classList.contains('active'))
+        element.classList.remove('active');
 }
 
 // search btn when on small device
@@ -108,16 +108,16 @@ window.addEventListener('resize', () => {
 //đăng nhập và tài khoản
 function activeAccount() {
     const element = document.getElementById('user-extend');
-    if (element.classList.contains('d-block'))
-        element.classList.remove('d-block');
+    if (element.classList.contains('active'))
+        element.classList.remove('active');
     else {
         removeOtherActive();
-        element.classList.add('d-block');
+        element.classList.add('active');
     }
 }
 
 
 function removeOtherActive () {
-    while (document.querySelector('.d-block'))
-        document.querySelector('.d-block').classList.remove('d-block');
+    while (document.querySelector('.active'))
+        document.querySelector('.active').classList.remove('active');
 }
