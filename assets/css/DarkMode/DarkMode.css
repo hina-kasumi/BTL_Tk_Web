@@ -4,7 +4,7 @@
     background-color: var(--bs-dark);
 }
 
-nav .fa-solid {
+nav button .fa-solid {
     border-color: var(--bs-light)!important;
     color: var(--bs-light)!important;
 }
@@ -19,6 +19,17 @@ nav .fa-solid {
 
 #search-bar-sm {
     background-color: var(--bs-dark);
+}
+
+#user-extend {
+    background-color: var(--bs-gray-700);
+}
+#user-extend a {
+    color: var(--bs-light);
+}
+
+#user-extend a li:hover {
+    background-color: var(--bs-gray-600);
 }
 
 /*sidebar*/

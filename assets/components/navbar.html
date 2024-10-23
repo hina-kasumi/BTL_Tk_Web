@@ -22,7 +22,34 @@
         <button>
             <i class="fa-solid fa-circle-half-stroke" onclick="darkMode()"></i>
         </button>
+        <div id="user-account">
+            <button onclick="activeAccount()">
+                <i class="fa-solid fa-user"></i>
+            </button>
+            <!--mở rông người dùng-->
+            <div id="user-extend">
+                <div class="account">
+                    <h5>H Hiếu</h5>
+                    <h6>@hina-kasumi</h6>
+                </div>
+                <hr>
+                <ul class="list-unstyled">
+                    <a href="">
+                        <li><i class="fa-brands fa-google"></i>
+                            Tài khoản của bạn
+                        </li>
+                    </a>
+                    <a href="">
+                        <li><i class="fa-solid fa-right-from-bracket"></i>
+                            Đăng xuất
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
     </div>
+    <!--    chuyên đến trang mới khi mà màn hình nhỏ-->
     <div class="category">
         <ul class="list-unstyled">
             <a href="index.html" class="category__items">
@@ -45,6 +72,8 @@
             </a>
         </ul>
     </div>
+
+    <!--thanh tìm kiếm khi mà màn hình thu nhỏ-->
     <div id="search-bar-sm"
          class="d-flex position-absolute justify-content-between align-items-center d-sm-none d-none">
         <button onclick="exitSearchbar()">

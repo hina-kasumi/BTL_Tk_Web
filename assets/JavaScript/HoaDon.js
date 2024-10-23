@@ -11,6 +11,7 @@ let index = 0;
 
 function overflowData(command) {
     const maxData = 5;
+    const visible = 2;
     const data = document.querySelectorAll('table.table > tbody > tr');
     const pageNum = data.length / maxData;
 
@@ -37,7 +38,8 @@ function overflowData(command) {
     //thay đổi số trang
     const page = document.getElementById('pages');
     page.innerHTML = '';
-    for (let i = index - 2; i <= index + 2; i++) {
+
+    for (let i = index - visible; i <= index + visible; i++) {
         if (i >= 0 && i <= pageNum) {
             let elem = document.createElement("span");
             elem.addEventListener('click', () => {

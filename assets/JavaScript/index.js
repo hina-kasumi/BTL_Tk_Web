@@ -69,18 +69,19 @@ function darkMode() {
 // khi là điện loại sẽ hiện list để chọn
 function activeCategory() {
     const element = document.querySelector('.category');
-    const active = document.querySelector('.active');
-    if (active)
-        element.classList.remove('active');
-    else
-        element.classList.add('active');
+    if (element.classList.contains('d-block'))
+        element.classList.remove('d-block');
+    else {
+        removeOtherActive();
+        element.classList.add('d-block');
+    }
 }
 
 // khi thay đổi màn hình thì sẽ bỏ hiển thị
 function removeActiveCategory() {
     const element = document.querySelector('.category');
-    if (document.querySelector('.active'))
-        element.classList.remove('active');
+    if (element.classList.contains('d-block'))
+        element.classList.remove('d-block');
 }
 
 // search btn when on small device
@@ -89,10 +90,7 @@ function exitSearchbar() {
     searchbar_sm.classList.add('d-none');
 }
 function openSearchbar() {
-    const element = document.querySelector('.category');
-    const active = document.querySelector('.active');
-    if (active)
-        element.classList.remove('active');
+    removeOtherActive();
     const searchbar_sm = document.getElementById('search-bar-sm');
     searchbar_sm.classList.remove('d-none');
 }
@@ -106,3 +104,20 @@ window.addEventListener('resize', () => {
         exitSearchbar();
     }
 });
+
+//đăng nhập và tài khoản
+function activeAccount() {
+    const element = document.getElementById('user-extend');
+    if (element.classList.contains('d-block'))
+        element.classList.remove('d-block');
+    else {
+        removeOtherActive();
+        element.classList.add('d-block');
+    }
+}
+
+
+function removeOtherActive () {
+    while (document.querySelector('.d-block'))
+        document.querySelector('.d-block').classList.remove('d-block');
+}
