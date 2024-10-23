@@ -8,6 +8,10 @@
     z-index: 1000;
     width: 100%;
 }
+nav button:has(.fa-solid) {
+    background: transparent;
+    border: none;
+}
 nav .fa-solid{
     font-size: 2rem;
     padding: 0.25rem 0.5rem !important;
@@ -18,12 +22,8 @@ nav .fa-solid{
 nav a {
     text-decoration: none;
 }
-#search-bar {
-    width: 50%;
-    min-width: 300px;
-}
 
-#search-bar input {
+input[type="search"] {
     background-color: var(--bs-light) !important;
 }
 
@@ -34,7 +34,6 @@ nav a {
 .category {
     display: none;
 }
-
 .active {
     display: block!important;
 }
@@ -51,12 +50,24 @@ nav a {
     margin-top: 0.5rem;
 }
 
+#search-bar-sm {
+    left: 0.25rem; right: 0.25rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    z-index: 2000;
+    background: var(--bs-light);
+}
+
 @media (min-width: 768px) {
     .navbar-container {
         height: fit-content;
     }
     #navbar {
         position: initial;
+    }
+    #search-bar {
+        width: 50%;
+        white-space: nowrap;
     }
 }
 

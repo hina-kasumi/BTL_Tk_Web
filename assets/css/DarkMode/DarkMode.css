@@ -5,7 +5,8 @@
 }
 
 nav .fa-solid {
-    border-color: var(--bs-light);
+    border-color: var(--bs-light)!important;
+    color: var(--bs-light)!important;
 }
 #search-bar > a {
     border-color: var(--bs-light)!important;
@@ -14,6 +15,10 @@ nav .fa-solid {
 .category__items > li {
     color: var(--bs-light)!important;
     border-color: var(--bs-gray);
+}
+
+#search-bar-sm {
+    background-color: var(--bs-dark);
 }
 
 /*sidebar*/

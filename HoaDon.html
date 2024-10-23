@@ -40,6 +40,15 @@
             <a href="./resources/test.xlsx" download>
                 <button class="bg-theme rounded text-light">Xuất File</button>
             </a>
+            <div class="d-flex align-items-center d-flex justify-content-between mt-1">
+                <button onclick="overflowData('prev')" class="border-0">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div id="pages"></div>
+                <button onclick="overflowData('next')" class="border-0">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
             <div class="data table-responsive">
                 <table class="table table-striped table-hover table-bordered caption-top align-middle">
                     <caption>Danh sách hóa đơn</caption>
@@ -52,7 +61,6 @@
                         <th>Trạng Thái</th>
                         <th>Tổng Tiền</th>
                         <th>Thành Tiền</th>
-                        <th>Thao Tác</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -64,27 +72,6 @@
                         <td>đang giao hàng</td>
                         <td>100.000.000</td>
                         <td>90.000.000</td>
-                        <td>chỉnh sửa</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>#123</td>
-                        <td>28/9/2024</td>
-                        <td>hiếu hiếu</td>
-                        <td>đang giao hàng</td>
-                        <td>100.000.000</td>
-                        <td>90.000.000</td>
-                        <td>chỉnh sửa</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>#123</td>
-                        <td>28/9/2024</td>
-                        <td>hiếu hiếu</td>
-                        <td>đang giao hàng</td>
-                        <td>100.000.000</td>
-                        <td>90.000.000</td>
-                        <td>chỉnh sửa</td>
                     </tr>
                     </tbody>
                 </table>
@@ -97,6 +84,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 <script src="./assets/JavaScript/index.js"></script>
+<script src="./assets/JavaScript/HoaDon.js"></script>
 </body>
 
 </html>

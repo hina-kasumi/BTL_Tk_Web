@@ -4,6 +4,7 @@ async function initComponent(component, where) {
     document.getElementById(where).innerHTML = await response.text();
 }
 
+// đánh dầu đang ở trang nào
 function currentPage() {
     const currentUrl = window.location.href.split('/'); //lấy tên miền
     const current = currentUrl[currentUrl.length - 1].split('.')[0]; // bỏ .html
@@ -21,7 +22,6 @@ async function init() {
     await initComponent('footer', 'footer');
     await currentPage();
 }
-
 window.addEventListener('DOMContentLoaded', init);
 
 
@@ -64,7 +64,6 @@ function darkMode() {
         removeDarkMode();
     }
 }
-
 // end dark mode feature
 
 // khi là điện loại sẽ hiện list để chọn
@@ -79,19 +78,31 @@ function activeCategory() {
 
 // khi thay đổi màn hình thì sẽ bỏ hiển thị
 function removeActiveCategory() {
+    const element = document.querySelector('.category');
+    if (document.querySelector('.active'))
+        element.classList.remove('active');
+}
+
+// search btn when on small device
+function exitSearchbar() {
+    const searchbar_sm = document.getElementById('search-bar-sm');
+    searchbar_sm.classList.add('d-none');
+}
+function openSearchbar() {
+    const element = document.querySelector('.category');
+    const active = document.querySelector('.active');
+    if (active)
+        element.classList.remove('active');
+    const searchbar_sm = document.getElementById('search-bar-sm');
+    searchbar_sm.classList.remove('d-none');
+}
+
+// khi màn hình thay đổi kích thức thì sẽ tắt bật vài thứ
+window.addEventListener('resize', () => {
     if (window.innerWidth >= 768) {
-        const element = document.querySelector('.category');
-        if (document.querySelector('.active'))
-            element.classList.remove('active');
+        removeActiveCategory();
     }
-}
-window.addEventListener('resize', removeActiveCategory);
-
-
-function tickAll() {
-    const checkBox = document.querySelectorAll('input[type="checkbox"]');
-    for (const checkBoxKey in checkBox) {
-        checkBox[checkBoxKey].checked = checkBox[0].checked;
+    if (window.innerWidth >= 576) {
+        exitSearchbar();
     }
-}
-
+});

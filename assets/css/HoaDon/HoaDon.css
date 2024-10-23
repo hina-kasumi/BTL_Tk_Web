@@ -18,8 +18,9 @@ table {
 section {
     width: calc(88vw);
     padding-right: 0;
-    margin-right: 0!important;
+    margin-right: 0 !important;
 }
+
 .data {
     overflow-x: auto;
 }
@@ -30,14 +31,31 @@ th:first-child {
     vertical-align: middle;
 }
 
-input[type="checkbox"]{
+table.table > tbody > tr {
+    display: none;
+}
+
+input[type="checkbox"] {
     --btn-size: 1.3rem;
     height: var(--btn-size);
     width: var(--btn-size);
+}
+
+#pages > span {
+    display: inline-block;
+    padding: 0.5rem;
+    text-align: center;
+    width: 2rem;
 }
 
 @media (min-width: 768px) {
     section {
         width: calc(90vw - 300px);
     }
+}
+
+.highlight {
+    color: #0087ff !important;
+    border-radius: 0.25rem;
+    background-color: var(--bs-gray-500);
 }
