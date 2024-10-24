@@ -16,34 +16,21 @@
     <title>Đăng nhập</title>
 </head>
 <body>
-<div>
-<!-- login side -->
-    <div id="main" class="flex-md-row align-items-center">
-        <div id="login-side">
-            <form method="post" class="d-flex flex-column">
+    <div id="login-panel" class="d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <form method="post" class="d-flex flex-column align-items-center" onsubmit="passwordValidation(event)">
                 <input type="email" name="email" id="email" placeholder="Email">
                 <input type="password" name="password" id="password" placeholder="Mật khẩu">
-                <hr class="">
-                <a href="" class="text-center mt-4 text-light">Bạn quên mật khẩu ư?</a>
-                <button type="submit" class="bg-theme">Đăng Nhập</button>
+                <a href="">bạn quên mật khẩu ư?</a>
+                <input type="submit" value="Đăng nhập">
             </form>
-        </div>
-
-<!-- logo side -->
-        <div id="logo-side" class="text-light text-center">
-            <a href="./index.html" class="text-decoration-none text-light d-flex flex-column">
-                <i class="fa-solid fa-house"></i>
-                <div style="line-height: 1em">
-                    <span class="text-theme">H</span>
-                    <span style="margin-left: -0.5em; ">W</span>
-                </div>
-            </a>
+                <hr class="container-fluid">
+                <a href="./index.html">
+                    <button>
+                        Tạo tài khoản mới
+                    </button>
+                </a>
         </div>
     </div>
-
-    <footer class="text-center">
-        <p>&copy;2024 UTC CNTT3-K64 | Design by HelloWorld</p>
-    </footer>
-</div>
 </body>
 </html>

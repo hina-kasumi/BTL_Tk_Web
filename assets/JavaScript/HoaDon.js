@@ -60,6 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//generate data for table in HoaDon
 for (let i = 0; i < 50; i++) {
     document.querySelector('tbody').innerHTML +=
         "<tr>\n" +

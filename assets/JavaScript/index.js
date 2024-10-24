@@ -21,7 +21,13 @@ async function init() {
     await initComponent('sidebar', 'sidebar');
     await initComponent('footer', 'footer');
     await currentPage();
+    if (!localStorage.getItem('account')) {
+        await sign_in();
+    } else {
+        await generateAccountInfor();
+    }
 }
+
 window.addEventListener('DOMContentLoaded', init);
 
 
@@ -64,6 +70,7 @@ function darkMode() {
         removeDarkMode();
     }
 }
+
 // end dark mode feature
 
 // khi là điện loại sẽ hiện list để chọn
@@ -89,6 +96,7 @@ function exitSearchbar() {
     const searchbar_sm = document.getElementById('search-bar-sm');
     searchbar_sm.classList.add('d-none');
 }
+
 function openSearchbar() {
     removeOtherActive();
     const searchbar_sm = document.getElementById('search-bar-sm');
@@ -107,7 +115,9 @@ window.addEventListener('resize', () => {
 
 //đăng nhập và tài khoản
 function activeAccount() {
-    const element = document.getElementById('user-extend');
+    const element = document.getElementById(
+        localStorage.getItem('account') ? 'user-extend' : 'login-request'
+    );
     if (element.classList.contains('active'))
         element.classList.remove('active');
     else {
@@ -116,8 +126,48 @@ function activeAccount() {
     }
 }
 
+// hệ thống đăng nhập
+function passwordValidation(e) {
+    const email = e.target.email.value.trim();
+    const password = e.target.password.value.trim(); // Lấy giá trị từ trường mật khẩu
+    const hasLetter = /[a-zA-Z]/.test(password);
+    const hasNumber = /\d/.test(password);
 
-function removeOtherActive () {
+    if (!hasLetter || !hasNumber || password.length < 8) {
+        e.preventDefault(); // Ngăn không cho form gửi đi nếu mật khẩu không hợp lệ
+        alert('mật khẩu phải có ít nhất 8 chữ số có cả số và chữ');
+    } else {
+        localStorage.setItem('account', email + '-' + password);
+        alert('Thành công');
+    }
+}
+
+async function sign_in() {
+    const response = await fetch('./login.html');
+    const element = document.createElement('div');
+    element.innerHTML = await response.text();
+    await document.body.appendChild(element);
+    removeOtherActive();
+}
+
+async function sign_out() {
+    removeOtherActive();
+    localStorage.removeItem('account');
+    alert('Đăng xuất thành công');
+}
+
+function generateAccountInfor (){
+    if (localStorage.getItem('account')) {
+        const infor = localStorage.getItem('account');
+        const email = infor.split('-')[0];
+        document.querySelector('#user-extend h6').innerHTML = email;
+        document.querySelector('#user-extend h5').innerHTML = email.split('@')[0];
+    }
+}
+// end hệ thống đăng nhập
+
+// help method
+function removeOtherActive() {
     while (document.querySelector('.active'))
         document.querySelector('.active').classList.remove('active');
 }

@@ -72,20 +72,29 @@ input[type="search"] {
 }
 
 #user-extend {
+    width: 250px;
+}
+
+#user-extend,
+#login-request {
     display: none;
     position: absolute;
     right: 0;
-    width: 250px;
     background: var(--bs-gray-200);
 }
-#user-extend a {
+
+#user-extend a,
+#login-request a {
     color: var(--bs-dark);
 }
-#user-extend a > li {
+
+#user-extend a > li,
+#login-request div > button {
     padding: 0.5rem 1rem;
 }
 
-#user-extend a > li:hover {
+#user-extend a > li:hover,
+#login-request div > button:hover{
     background-color: var(--bs-gray-400);
 }
 

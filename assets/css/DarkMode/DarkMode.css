@@ -21,10 +21,12 @@ nav button .fa-solid {
     background-color: var(--bs-dark);
 }
 
-#user-extend {
+#user-extend,
+#login-request button {
     background-color: var(--bs-gray-700);
 }
-#user-extend a {
+#user-extend a,
+#login-request div button {
     color: var(--bs-light);
 }
 
@@ -76,6 +78,12 @@ nav button .fa-solid {
     background-color: var(--bs-gray-800) !important;
 }
 
+#login-panel input:not([type="submit"]){
+    background-color: var(--bs-light)!important;
+}
+
+#login-panel
+
 /*đơn hàng*/
 table.table {
     --bs-table-color: #fff;
@@ -93,6 +101,15 @@ table.table {
 
 table.table th {
     background-color: var(--secondary-color) !important;
+}
+table.table tr:nth-child(odd) {
+    background-color: black !important;
+}
+table.table tr:hover {
+    background-color: #707070!important;
+}
+table.table th, td {
+    color: var(--bs-light)!important;
 }
 
 /*cài đặt*/
