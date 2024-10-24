@@ -16,21 +16,28 @@
     <title>Đăng nhập</title>
 </head>
 <body>
-    <div id="login-panel" class="d-flex justify-content-center align-items-center">
-        <div class="text-center">
-            <form method="post" class="d-flex flex-column align-items-center" onsubmit="passwordValidation(event)">
-                <input type="email" name="email" id="email" placeholder="Email">
-                <input type="password" name="password" id="password" placeholder="Mật khẩu">
-                <a href="">bạn quên mật khẩu ư?</a>
-                <input type="submit" value="Đăng nhập">
-            </form>
-                <hr class="container-fluid">
-                <a href="./index.html">
-                    <button>
-                        Tạo tài khoản mới
-                    </button>
-                </a>
-        </div>
+<div id="login-panel" class="justify-content-center align-items-center">
+    <div class="text-center">
+        <form class="flex-column align-items-center" onsubmit="Login(event)">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="password" name="password" id="password" placeholder="Mật khẩu">
+            <a href="">bạn quên mật khẩu ư?</a>
+            <input type="submit" value="Đăng nhập">
+        </form>
+        <hr class="container-fluid">
+        <button onclick="switchLoginAndNewAccount('login-panel', 'newAccountPanel')">Tạo tài khoản mới</button>
     </div>
+</div>
+<div id="newAccountPanel" class="justify-content-center align-items-center">
+    <div class="text-center">
+        <form class="d-flex flex-column align-items-center" onsubmit="createNewAccount(event)">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Mật khẩu">
+            <input type="submit" value="Tạo Tài khoản">
+        </form>
+        <hr class="container-fluid">
+        <button onclick="switchLoginAndNewAccount('newAccountPanel', 'login-panel')">Trở Lại Đăng nhập</button>
+    </div>
+</div>
 </body>
 </html>

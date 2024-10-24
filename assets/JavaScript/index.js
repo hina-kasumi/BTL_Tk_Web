@@ -21,11 +21,9 @@ async function init() {
     await initComponent('sidebar', 'sidebar');
     await initComponent('footer', 'footer');
     await currentPage();
-    if (!localStorage.getItem('account')) {
-        await sign_in();
-    } else {
+    if (localStorage.getItem('account')) {
         await generateAccountInfor();
-    }
+    } else await sign_in();
 }
 
 window.addEventListener('DOMContentLoaded', init);
@@ -127,19 +125,47 @@ function activeAccount() {
 }
 
 // hệ thống đăng nhập
-function passwordValidation(e) {
+function Login(e) {
+    if (localStorage.getItem('account')) {
+        const infor = localStorage.getItem('account').split('-');
+        const email = infor[0];
+        const password = infor[1];
+        console.log(e.target.email.value, email);
+        console.log(e.target.password.value, password)
+        if (e.target.email.value === email && e.target.password.value === password) {
+            alert('Đăng nhập thành công');
+        } else {
+            alert('Sai mật khẩu hoặc email');
+        }
+    } else {
+        alert('Sai mật khẩu hoặc email');
+    }
+}
+
+function createNewAccount(e) {
     const email = e.target.email.value.trim();
     const password = e.target.password.value.trim(); // Lấy giá trị từ trường mật khẩu
     const hasLetter = /[a-zA-Z]/.test(password);
     const hasNumber = /\d/.test(password);
-
-    if (!hasLetter || !hasNumber || password.length < 8) {
+    const emailChecker = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!emailChecker) {
+        e.preventDefault(); // Ngăn không cho form gửi đi nếu mật khẩu không hợp lệ
+        alert('hãy nhập email đúng định dạng');
+    } else if (!hasLetter || !hasNumber || password.length < 8) {
         e.preventDefault(); // Ngăn không cho form gửi đi nếu mật khẩu không hợp lệ
         alert('mật khẩu phải có ít nhất 8 chữ số có cả số và chữ');
     } else {
+        e.preventDefault(); // Ngăn không cho form gửi đi nếu mật khẩu không hợp lệ
+        console.log(email, password);
         localStorage.setItem('account', email + '-' + password);
+        switchLoginAndNewAccount('newAccountPanel', 'login-panel');
         alert('Thành công');
     }
+}
+
+function switchLoginAndNewAccount(curr, target) {
+    document.getElementById(curr).style.display = 'none';
+    document.getElementById(target).style.display = 'flex';
 }
 
 async function sign_in() {
@@ -156,7 +182,7 @@ async function sign_out() {
     alert('Đăng xuất thành công');
 }
 
-function generateAccountInfor (){
+function generateAccountInfor() {
     if (localStorage.getItem('account')) {
         const infor = localStorage.getItem('account');
         const email = infor.split('-')[0];
@@ -164,6 +190,7 @@ function generateAccountInfor (){
         document.querySelector('#user-extend h5').innerHTML = email.split('@')[0];
     }
 }
+
 // end hệ thống đăng nhập
 
 // help method

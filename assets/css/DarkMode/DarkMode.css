@@ -78,11 +78,11 @@ nav button .fa-solid {
     background-color: var(--bs-gray-800) !important;
 }
 
-#login-panel input:not([type="submit"]){
+#login-panel input:not([type="submit"]),
+#newAccountPanel input:not([type="submit"]){
     background-color: var(--bs-light)!important;
 }
 
-#login-panel
 
 /*đơn hàng*/
 table.table {

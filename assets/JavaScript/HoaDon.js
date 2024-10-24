@@ -25,7 +25,7 @@ function overflowData(command) {
     // console.log(index);
 
     // hiển thị dữ liệu cần hiện và ẩn dữ liệu cần ẩn
-    for (let i = index * maxData - maxData; i <= (index + 1) * maxData + maxData; i++) {
+    for (let i = index * maxData - maxData * 2; i <= (index + 1) * maxData + maxData * 2; i++) {
         // console.log(i);
         if (i >= 0 && i < data.length) {
             if (i >= index * maxData && i < maxData * (index + 1))
