@@ -135,9 +135,11 @@ function Login(e) {
         if (e.target.email.value === email && e.target.password.value === password) {
             alert('Đăng nhập thành công');
         } else {
+            e.preventDefault(); // Ngăn không cho form gửi đi nếu mật khẩu không hợp lệ
             alert('Sai mật khẩu hoặc email');
         }
     } else {
+        e.preventDefault(); // Ngăn không cho form gửi đi nếu mật khẩu không hợp lệ
         alert('Sai mật khẩu hoặc email');
     }
 }
