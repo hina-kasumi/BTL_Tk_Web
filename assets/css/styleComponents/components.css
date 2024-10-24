@@ -81,6 +81,7 @@ input[type="search"] {
     position: absolute;
     right: 0;
     background: var(--bs-gray-200);
+    z-index: 2100;
 }
 
 #user-extend a,
