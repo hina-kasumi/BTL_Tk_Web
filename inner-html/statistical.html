@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title >Thống kê doanh thu</title>
+        <link rel="stylesheet" href="statistical.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
+    <body>
+
+        <h2 class="title">Thống kê</h2>
+        
+        <h4>Doanh thu theo tháng</h4>
+        <canvas id="chart1" style="width:100%;max-width:800px"></canvas>
+        
+        <script>
+            const xValues = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"];
+            const yValues = [25, 15, 30, 22, 19, 30, 21, 13, 12, 20, 42];  
+
+            new Chart("chart1", {
+                type: "line",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        fill: false,
+                        lineTension: 0,
+                        backgroundColor: "rgba(0,0,255,1.0)",
+                        borderColor: "rgba(0,0,255,0.1)",
+                        data: yValues
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: "Doanh thu theo tháng (đơn vị: triệu đồng)"
+                    },
+                    legend: { display: false },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                min: 0,
+                                max: 50,
+                                callback: function(value) {
+                                    return value + ' triệu'; 
+                                }
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Doanh thu (triệu đồng)'
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Tháng'  
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+        
+    </body>
+</html>

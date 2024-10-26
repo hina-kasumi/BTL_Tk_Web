@@ -1,0 +1,31 @@
+.title {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%; 
+    text-align: center; 
+}
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.chart-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; 
+    margin: 20px 0;
+}
+
+canvas {
+    width: 100% !important; 
+    height: auto !important; 
+}
+
+@media (max-width: 768px) {
+    .chart-section {
+        width: 100%; 
+    }
+}

@@ -1,10 +1,16 @@
-"use strict";
 function initPopup() {
+    console.log('initPopup');
     let popup = document.getElementsByClassName('pop-up-element');
     for (let i = 0; i < popup.length; i++) {
         popup[i].addEventListener('click', function () {
             console.log('Phần tử được click là class thứ: ' + i);
             popup[i].nextElementSibling.style.display = (popup[i].nextElementSibling.style.display === 'none') ? 'flex' : 'none';
+            // tắt tất cả các popup khác
+            for (let j = 0; j < popup.length; j++) {
+                if (j !== i) {
+                    popup[j].nextElementSibling.style.display = 'none';
+                }
+            }
         });
     }
 }
@@ -19,9 +25,14 @@ function initBack() {
     }
 }
 
+
 function init() {
-    initPopup();
-    initBack();
+    // document.addEventListener("DOMContentLoaded", function () {
+        console.log('Navbar.js loaded');
+        initPopup();
+        initBack();
+    // });
 }
+
 
 init();

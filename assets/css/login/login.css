@@ -1,31 +1,35 @@
 :root {
     --theme-color: #0084ff;
+    --hover-color: #0056b3;
 }
 
-/* layout */
 body {
     background-color: #F1F4FB;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.main,
+article,
 footer {
     text-align: center;
 }
 
-.logo {
+#logo {
     font-size: 3.5em;
     color: var(--theme-color);
     margin: 1em;
 }
 
-.logo a {
+#logo a {
     text-decoration: none;
     color: var(--theme-color);
 }
 
+#logo a:hover {
+    color: var(--hover-color);
+}
+
 /* login */
-.login {
+form {
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -34,8 +38,8 @@ footer {
     gap: 1em;
 }
 
-.login input[type=text],
-.login input[type=password] {
+form input[type=text],
+form input[type=password] {
     padding: 20px;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -49,16 +53,20 @@ form input[type=submit] {
     border: none;
 }
 
-.forgot-pass {
+form input[type=submit]:hover {
+    background-color: var(--hover-color);
+}
+
+#forgot-pass {
     margin: 10px;
 }
 
-.forgot-pass a {
+#forgot-pass a {
     color: black;
     text-decoration: none;
 }
 
-.create-new-acc {
+#create-new-acc {
     margin-top: 5em;
     padding: 0.8em;
     border-radius: 3em;
@@ -67,13 +75,18 @@ form input[type=submit] {
     width: 90%;
 }
 
+#create-new-acc:hover {
+    color: white;
+    background-color: var(--hover-color);
+}
+
 
 /* footer */
-.compainy-name {
+#compainy-name {
     margin: 15px;
 }
 
-.contact a {
+#contact a {
     margin: 3px;
     font-size: 0.8em;
     color: black;

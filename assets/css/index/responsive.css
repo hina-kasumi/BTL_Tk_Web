@@ -1,0 +1,11 @@
+.main {
+    padding-top: 0px;
+}
+
+header {
+    position: static !important;
+}
+
+#sidebar {
+    display: block;
+}

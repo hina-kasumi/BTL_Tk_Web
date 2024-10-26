@@ -13,59 +13,70 @@
     <!-- style -->
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/index/style.css">
-    <link rel="stylesheet" href="assets/css/index/responsive.css">
+    <link rel="stylesheet" media="(min-width: 640px)" href="assets/css/index/responsive.css">
 
 
 
-    <!-- title -->
+    <!-- title favicon -->
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
     <title>Sales Order Management</title>
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <!-- Logo -->
-        <div class="header__Logo">
-            <a href="./" class="header__Logo">
-                <i class="fa-solid fa-house"></i>
-                <p>HelloWorld</p>
-            </a>
-        </div>
-
-        <!-- Navigation -->
-        <nav class="header__nav">
-            <!-- search -->
-            <div class="header__nav__search">
-                <i class="fa-solid fa-magnifying-glass pop-up-element"></i>
-                <div class="nav__search">
-                    <button class="back-element"><i class="fa-solid fa-arrow-left"></i></button>
-                    <input type="text" placeholder="Tìm kiếm...">
-                    <button><i class="fa-solid fa-search"></i></button>
-                </div>
+    <!-- header -->
+    <div id="header"></div>
+    <main>
+        <aside id="sidebar"></aside>
+        
+        <!-- article -->
+        <article class="main">
+            <div class="main__title">
+                <h1>Hóa Đơn</h1>
+                <button onclick="() => {console.log('click');}">Xuất File</button>
             </div>
 
-
-            <div class="header__nav__more-opt">
-                <i class="fa-solid fa-bars pop-up-element"></i>
-                <ul class="nav__more-opt">
-                    <li><a href="./">Hóa Đơn</a></li>
-                    <li><a href="./">Thống Kê</a></li>
-                    <li><a href="./">Hàng Hóa</a></li>
-                    <li><a href="./inner-html/login.html">Đăng Nhập</a></li>
-                </ul>
+            <!-- table -->
+            <div class="main__table">
+                <table>
+                    <tr>
+                        <th><input type="checkbox" class="checkboxALL"></th>
+                        <th>Mã Hóa Đơn</th>
+                        <th>Ngày Tạo</th>
+                        <th>Khách Hàng</th>
+                        <th>Trạng Thái</th>
+                        <th>Tổng Tiền</th>
+                        <th>Thành Tiền</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#123</td>
+                        <td>28/9/2024</td>
+                        <td>hiếu hiếu</td>
+                        <td>đang giao hàng</td>
+                        <td>100.000.000</td>
+                        <td>90.000.000</td>
+                        <td>chỉnh sửa</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#123</td>
+                        <td>28/9/2024</td>
+                        <td>hiếu hiếu</td>
+                        <td>đang giao hàng</td>
+                        <td>100.000.000</td>
+                        <td>90.000.000</td>
+                        <td>chỉnh sửa</td>
+                    </tr>
+                </table>
             </div>
-        </nav>
-    </header>
+        </article>
+    </main>
 
-    <!-- section -->
-    <section class="main">
-        <div class="main__title">
-            <h1 class="title">Hóa Đơn</h1>
-            <button class="main__xuat-file">Xuất File</button>
-        </div>
-    </section>
 
-    <script src="index.js"></script>
+    <footer id="footer"></footer>
+    <script src="./assets/JavaScript/index.js"></script>
+    <!-- <script src="./assets/JavaScript/Navbar.js" defer></script> -->
 </body>
 
 </html>

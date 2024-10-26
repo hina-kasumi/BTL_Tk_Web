@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thống kê</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="statistical.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
+    <body>
+
+        <h2 class="title">Thống kê</h2>
+
+        <div class="chart-section">
+            <h3>Doanh thu theo tháng</h3>
+            <canvas id="chart1"></canvas>
+        </div>
+
+        
+        <div class="chart-section">
+            <h3>Người xem theo tháng</h3>
+            <canvas id="chart2"></canvas>
+        </div>
+        
+
+        <script>
+            
+            const xValues1 = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11"];
+            const yValues1 = [25, 15, 30, 22, 19, 30, 21, 13, 12, 20, 42]; 
+
+            new Chart("chart1", {
+                type: "line",
+                data: {
+                    labels: xValues1,
+                    datasets: [{
+                        label: "Doanh thu",
+                        fill: false,
+                        lineTension: 0,
+                        backgroundColor: "rgba(0,0,255,1.0)",
+                        borderColor: "rgba(0,0,255,0.1)",
+                        data: yValues1
+                    }]
+                },
+                options: {
+                    legend: { display: false },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                min: 0,
+                                max: 50,
+                                callback: function(value) {
+                                    return value + ' triệu'; 
+                                }
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Doanh thu (triệu đồng)'
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Tháng'
+                            }
+                        }]
+                    }
+                }
+            });
+
+            
+            const xValues2 = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11"];
+            const yValues2 = [500, 600, 800, 700, 650, 720, 500, 480, 560, 610, 750];  
+
+           
+            new Chart("chart2", {
+                type: "bar",  
+                data: {
+                    labels: xValues2,
+                    datasets: [{
+                        label: "Người xem",
+                        backgroundColor: "rgba(255,99,132,0.2)",
+                        borderColor: "rgba(255,99,132,1)",
+                        borderWidth: 1,
+                        data: yValues2
+                    }]
+                },
+                options: {
+                    legend: { display: false },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                min: 0,
+                                max: 1000,
+                                callback: function(value) {
+                                    return value + ' người';
+                                }
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Số người xem'
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Tháng'
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+        
+    </body>
+</html>
