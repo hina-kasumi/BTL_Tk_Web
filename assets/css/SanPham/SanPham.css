@@ -35,6 +35,10 @@ a:has(.items) {
     color: var(--bs-dark);
 }
 
+.items__num {
+    color: var(--bs-gray-600) !important;
+}
+
 .items__price {
     font-size: 1.3em;
     position: absolute;

@@ -17,5 +17,5 @@
 }
 
 #theme-btn:hover {
-    background: var(--bs-gray-600);
+    background: var(--bs-gray-600)!important;
 }

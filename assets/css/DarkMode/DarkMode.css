@@ -1,91 +1,177 @@
-/*component*/
-/*navbar*/
-#navbar {
-    background-color: var(--bs-dark);
+/*base*/
+#navbar,
+#navbar .category__items > li,
+#search-bar-sm,
+#sidebar,
+#sidebar + div.flex-fill{
+    background-color: var(--bs-dark)!important;
+    color: var(--bs-light);
+}
+#navbar .category__items:not(:first-child) li{
+    border-top-color: var(--bs-light)!important;
 }
 
-nav button .fa-solid {
+#navbar button > .fa-solid,
+#search-bar > a{
     border-color: var(--bs-light)!important;
     color: var(--bs-light)!important;
 }
-#search-bar > a {
-    border-color: var(--bs-light)!important;
-    color: var(--bs-light)!important;
-}
-.category__items > li {
-    color: var(--bs-light)!important;
-    border-color: var(--bs-gray);
-}
 
-#search-bar-sm {
-    background-color: var(--bs-dark);
+#navbar .category li:hover {
+    background-color: var(--bs-gray-500)!important;
 }
 
 #user-extend,
-#login-request button {
-    background-color: var(--bs-gray-700);
+#login-request,
+#user-account a{
+    background-color: var(--bs-gray-700)!important;
+    color: var(--bs-light)!important;
 }
-#user-extend a,
-#login-request div button {
-    color: var(--bs-light);
-}
-
-#user-extend a li:hover {
-    background-color: var(--bs-gray-600);
-}
-
-/*sidebar*/
-#sidebar, .flex-fill {
-    background-color: var(--bs-dark) !important;
-    color: var(--bs-light) !important;
+#user-account li:hover {
+    background-color: var(--bs-gray-600)!important;
 }
 
 #sidebar {
-    border-right: 1px solid var(--bs-light) !important;
+    border-right:1px solid var(--bs-light)!important;
+}
+
+#footer {
+    background-color: var(--secondary-color)!important;
 }
 
 .current-page {
-    background-color: var(--bs-light) !important;
-    color: var(--bs-dark) !important;
-}
-
-/*footer*/
-#footer {
-    background-color: var(--secondary-color) !important;
-}
-
-#footer a {
-    color: black !important;
-}
-
-/*index*/
-.element,
-.items {
-    background-color: #151515 !important;
-    color: var(--bs-light) !important;
-    border-color: var(--bs-light) !important;
-}
-
-.element:hover {
-    background-color: var(--bs-gray) !important;
-}
-
-.items__head {
-    color: var(--bs-light) !important;
-}
-
-.items:hover {
-    background-color: var(--bs-gray-800) !important;
-}
-
-#login-panel input:not([type="submit"]),
-#newAccountPanel input:not([type="submit"]){
+    color: var(--bs-dark)!important;
     background-color: var(--bs-light)!important;
 }
 
+/*background*/
+.dm-bg-dark-deep {
+    background-color: #151515!important;
+}
+.dm-bg-dark {
+    background-color: var(--bs-dark) !important;
+}
 
-/*đơn hàng*/
-table.table {
+.dm-bg-light {
+    background-color: var(--bs-light)!important;
+}
+
+.dm-bg-gray {
+    background-color: var(--bs-gray) !important;
+}
+
+.dm-bg-gray-100 {
+    background-color: var(--bs-gray-100) !important;
+}
+
+.dm-bg-gray-200 {
+    background-color: var(--bs-gray-200) !important;
+}
+
+.dm-bg-gray-300 {
+    background-color: var(--bs-gray-300) !important;
+}
+
+.dm-bg-gray-400 {
+    background-color: var(--bs-gray-400) !important;
+}
+
+.dm-bg-gray-500 {
+    background-color: var(--bs-gray-500) !important;
+}
+
+.dm-bg-gray-600 {
+    background-color: var(--bs-gray-600) !important;
+}
+
+.dm-bg-gray-700 {
+    background-color: var(--bs-gray-700) !important;
+}
+.dm-bg-gray-800 {
+    background-color: var(--bs-gray-800) !important;
+}
+
+/*text*/
+.dm-text-dark {
+    color: var(--bs-dark) !important;
+}
+
+.dm-text-light {
+    color: var(--bs-light) !important;
+}
+
+.dm-text-gray {
+    color: var(--bs-gray) !important;
+}
+
+.dm-text-gray-100 {
+    color: var(--bs-gray-100)!important;
+}
+
+.dm-text-gray-200 {
+    color: var(--bs-gray-200)!important;
+}
+
+.dm-text-gray-300 {
+    color: var(--bs-gray-300)!important;
+}
+
+.dm-text-gray-400 {
+    color: var(--bs-gray-400)!important;
+}
+
+.dm-text-gray-500 {
+    color: var(--bs-gray-500)!important;
+}
+
+.dm-text-gray-600 {
+    color: var(--bs-gray-600)!important;
+}
+
+.dm-text-gray-700 {
+    color: var(--bs-gray-700)!important;
+}
+
+/*border*/
+.dm-b-light {
+    border-color: var(--bs-light)!important;
+}
+.dm-bt-light {
+    border-top-color: var(--bs-light)!important;
+}
+.dm-bs-light {
+    border-left-color: var(--bs-light)!important;
+}
+
+.dm-be-light {
+    border-right-color: var(--bs-light) !important;
+}
+.dm-bb-light {
+    border-bottom-color: var(--bs-light) !important;
+}
+
+/*special component*/
+.md-btn {
+    color: var(--bs-light) !important;
+    background-color: var(--bs-dark) !important;
+
+}
+
+/*index*/
+.main-content a.element {
+    background-color: #151515!important;
+    color: var(--bs-light)!important;
+    border-color: var(--bs-light);
+}
+.main-content a.element:hover {
+    background-color: var(--bs-gray-700)!important;
+}
+
+/*bảng dữ liệu*/
+.dm-table-dark {
+    thead th{
+        background-color: var(--primary-color) !important;
+    }
     --bs-table-color: #fff;
     --bs-table-bg: #212529;
     --bs-table-border-color: #373b3e;
@@ -96,33 +182,24 @@ table.table {
     --bs-table-hover-bg: #323539;
     --bs-table-hover-color: #fff;
     color: var(--bs-table-color);
-    border-color: var(--bs-table-border-color)
+    border-color: var(--bs-table-border-color);
 }
 
-table.table th {
-    background-color: var(--secondary-color) !important;
+/*hàng hóa*/
+.items {
+    background-color: #151515 !important;
+    color: var(--bs-light) !important;
+    border-color: var(--bs-light) !important;
 }
-table.table tr:nth-child(odd) {
-    background-color: black !important;
+.items__head {
+     color: var(--bs-light);
 }
-table.table tr:hover {
-    background-color: #707070!important;
-}
-table.table th, td {
-    color: var(--bs-light)!important;
+.items:hover {
+    background: var(--bs-gray-800) !important;
 }
 
-/*cài đặt*/
-#theme-btn {
-    color: var(--bs-gray-dark);
-    background: var(--bs-light);
-}
 
 /*trợ giúp*/
-.danh-muc-items {
-    border: 1px solid var(--bs-light);
-}
-
 .accordion-header > button {
     background-color: var(--primary-color)!important;
     color: var(--bs-light) !important;
@@ -135,14 +212,4 @@ table.table th, td {
 .accordion-body {
     background-color: var(--bs-gray-800)!important;
     color: var(--bs-light) !important;
-}
-
-form input,
-form textarea {
-    background-color: var(--bs-gray-800)!important;
-    color: var(--bs-light) !important;
-}
-
-form input[type="submit"] {
-    border-color: var(--bs-light);
 }

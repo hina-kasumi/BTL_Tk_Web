@@ -12,7 +12,9 @@ function currentPage() {
     const curr = document.querySelector('.current-page');
     if (curr)
         curr.classList.remove('current-page');
-    document.getElementsByClassName(current ? current : 'index')[0].classList.add('current-page');
+    const page = document.getElementsByClassName(current ? current : 'index')[0];
+    if (page)
+        page.classList.add('current-page');
 }
 
 // khởi tạo các thành phần cân thiết
