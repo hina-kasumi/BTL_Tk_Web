@@ -61,7 +61,6 @@ article > div {
     padding: 0.5rem;
 }
 
-
 .fa-star {
     color: var(--bs-yellow);
 }
@@ -70,4 +69,35 @@ article > div {
     html {
         width: fit-content;
     }
+}
+
+#edit-info-product {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(21, 21, 21, 0.5);
+    form {
+        background-color: var(--bs-light);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        width: 50%;
+        input, textarea {
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+        textarea {
+            height: 8rem;
+            resize: none;
+        }
+        button {
+            float: right;
+            margin-left: 1rem;
+        }
+    }
+
 }

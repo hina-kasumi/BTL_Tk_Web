@@ -202,3 +202,19 @@ function removeOtherActive() {
     while (document.querySelector('.active'))
         document.querySelector('.active').classList.remove('active');
 }
+
+{
+    function createID(id) {
+        localStorage.setItem('productID', id);
+
+    }
+
+    const items = document.getElementsByClassName('items');
+    if (items.length) {
+        for (let i = 0; i < items.length; i++) {
+            items[i].addEventListener('click', () => {
+                createID(i);
+            })
+        }
+    }
+}
