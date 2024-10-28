@@ -1,0 +1,67 @@
+.back-btn {
+    background-color: transparent;
+    border: none;
+    margin-left: 1rem;
+}
+
+.back-btn i {
+    font-size: 4rem;
+}
+
+section {
+    margin: 0 !important;
+}
+
+article {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+
+
+.product > div {
+    flex: 1;
+}
+
+.images {
+    width: 100%;
+    max-width: 500px;
+}
+
+.images > img {
+    height: calc(100vw - 1rem);
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-height: 500px;
+}
+
+.list-images {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-images > img {
+    --images-size: 5rem;
+    width: var(--images-size);
+    height: var(--images-size);
+    flex: 1;
+    object-fit: cover;
+    border: 1px solid var(--bs-dark);
+}
+
+.current-img {
+    opacity: 50%;
+    border: 2px solid var(--bs-dark);
+}
+
+article > div {
+    border: 1px solid var(--bs-dark);
+    padding: 0.5rem;
+}
+
+
+.fa-star {
+    color: var(--bs-yellow);
+}

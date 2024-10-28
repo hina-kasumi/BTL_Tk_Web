@@ -154,7 +154,7 @@
 .md-btn {
     color: var(--bs-light) !important;
     background-color: var(--bs-dark) !important;
-
+    border-color: var(--bs-light);
 }
 
 /*index*/
@@ -212,4 +212,9 @@
 .accordion-body {
     background-color: var(--bs-gray-800)!important;
     color: var(--bs-light) !important;
+}
+
+/*thông tin hàng hóa*/
+.comments {
+    border-color: var(--bs-light)!important;
 }
