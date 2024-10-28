@@ -65,3 +65,9 @@ article > div {
 .fa-star {
     color: var(--bs-yellow);
 }
+
+@media (max-width: 576px) {
+    html {
+        width: fit-content;
+    }
+}
