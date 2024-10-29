@@ -39,7 +39,6 @@
         <h2 class="title">Thống kê</h2>
         <p class="description">phân tích và thống kê hóa đơn</p>
         <section class="main-content">
-            <h1>Thống kê</h1>
             <div class="head1 inline">
                 <div class="box blue">
                     <p><i class="fas fa-user"></i> Thành viên: 4</p>
@@ -60,16 +59,14 @@
                     <p><i class="fas fa-shopping-cart"></i> Đơn hàng: 2</p>
                 </div>
             </div>
-            <div class="chart">
-                <canvas id="myChart"></canvas>
-            </div>
-            <div class="chart">
-                <div style="width: 60%;">
+            <div class="container-fluid d-flex flex-wrap">
+                <div class="chart">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="chart">
                     <canvas id="myPieChart"></canvas>
                 </div>
             </div>
-            <script src="./assets/JavaScript/ThongKe/char.js"></script>
-            <script src="./assets/JavaScript/ThongKe/piechart.js"></script>
             <div class="after">
                 <h2>Tin Mới</h2>
                 <table>
@@ -123,11 +120,11 @@
                     <div class="rating-summary">
                         <h1>4,2</h1>
                         <div class="stars">
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>☆</span> <!-- Ngôi sao trống cho phần đánh giá 4/5 -->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </div>
                         <p>1 N bài đánh giá</p>
                     </div>
@@ -172,7 +169,11 @@
                         <div class="review-info">
                             <h3>Gia Huy Pham</h3>
                             <div class="stars">
-                                ★★☆☆☆
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
                             </div>
                             <p class="review-date">3 tháng 10, 2024</p>
                         </div>
@@ -193,7 +194,11 @@
                         <div class="review-info">
                             <h3>Thuy Thanh</h3>
                             <div class="stars">
-                                ★★★★☆
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
                             </div>
                             <p class="review-date">29 tháng 7, 2024</p>
                         </div>
@@ -216,6 +221,8 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 <script src="./assets/JavaScript/index.js"></script>
+<script src="./assets/JavaScript/ThongKe/char.js"></script>
+<script src="./assets/JavaScript/ThongKe/piechart.js"></script>
 </body>
 
 </html>

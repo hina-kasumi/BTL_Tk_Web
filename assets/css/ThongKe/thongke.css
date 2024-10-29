@@ -42,19 +42,23 @@ p i{
     margin: 5px 0;
 }
 .chart{
-    padding-left: 150px;
-    width: 50%; 
     margin: 0 auto;
-    float: left;
     box-sizing: border-box;
-    display: inline;
     justify-content: center;
+}
+.chart canvas {
+    margin: 0 auto;
+    height: 10vw!important;
+    width: 10vw!important;
+    min-width: 300px;
+    min-height: 300px;
 }
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    float: right;
+    max-width: 768px;
+    margin: 0 auto;
 }
 td, th {
     border: 1px solid #dddddd;
@@ -65,10 +69,7 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 .after{
-    width: 50%;
-    float:right;
     display: inline;
-    justify-content: center;
     padding-left: 10px;
 }
 .text_evaluate{
@@ -82,8 +83,7 @@ tr:nth-child(even) {
 }
 
 .stars {
-    color: yellowgreen; 
-    font-size: 24px;
+    color: yellowgreen;
 }
 
 .stars span {
@@ -96,8 +96,8 @@ tr:nth-child(even) {
 }
 
 .rating-distribution {
+    max-width: 768px;
     flex-grow: 1;
-    margin-left: 20px;
 }
 
 .rating-bar {
@@ -191,4 +191,10 @@ button {
 
 button:hover {
     background-color: #f0f0f0;
+}
+
+@media (max-width: 576px) {
+    html {
+        width: fit-content;
+    }
 }
