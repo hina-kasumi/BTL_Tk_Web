@@ -11,11 +11,16 @@
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!--framework-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!-- style -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/styleComponents/components.css">
+    <link rel="stylesheet" href="./assets/css/ThongKe/thongke.css">
 
     <!-- title favicon -->
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
@@ -34,7 +39,175 @@
         <h2 class="title">Thống kê</h2>
         <p class="description">phân tích và thống kê hóa đơn</p>
         <section class="main-content">
+            <h1>Thống kê</h1>
+            <div class="head1 inline">
+                <div class="box blue">
+                    <p><i class="fas fa-user"></i> Thành viên: 4</p>
+                </div>
+                <div class="box red">
+                    <p><i class="fas fa-money-bill-wave"></i> Danh thu tháng : 8.432.600đ</p>
+                </div>
+                <div class="box teal">
+                    <p><i class="fas fa-user-plus"></i> User mới: 4</p>
+                </div>
+                <div class="box blue">
+                    <p><i class="fas fa-calendar-alt"></i> Doanh thu ngày: 450.000đ</p>
+                </div>
+                <div class="box red">
+                    <p><i class="fas fa-box"></i> Sản phẩm: 5</p>
+                </div>
+                <div class="box teal">
+                    <p><i class="fas fa-shopping-cart"></i> Đơn hàng: 2</p>
+                </div>
+            </div>
+            <div class="chart">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="chart">
+                <div style="width: 60%;">
+                    <canvas id="myPieChart"></canvas>
+                </div>
+            </div>
+            <script src="./assets/JavaScript/ThongKe/char.js"></script>
+            <script src="./assets/JavaScript/ThongKe/piechart.js"></script>
+            <div class="after">
+                <h2>Tin Mới</h2>
+                <table>
+                    <tr>
+                        <th>Tên đơn</th>
+                        <th>Danh mục</th>
+                        <th>Giá</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                    <tr>
+                        <td>Nendoroid Kusuriya no Hitorigoto Maomao</td>
+                        <td>Mô hình</td>
+                        <td>40$</td>
+                        <td>Đang vận chuyển</td>
+                    </tr>
+                    <tr>
+                        <td>Nendoroid Kusuriya no Hitorigoto Maomao</td>
+                        <td>Mô hình</td>
+                        <td>40$</td>
+                        <td>Đã thanh toán</td>
+                    </tr>
+                    <tr>
+                        <td>Nendoroid Kusuriya no Hitorigoto Maomao</td>
+                        <td>Mô hình</td>
+                        <td>40$</td>
+                        <td>đã hủy</td>
+                    </tr>
+                    <tr>
+                        <td>Nendoroid Kusuriya no Hitorigoto Maomao</td>
+                        <td>Mô hình</td>
+                        <td>40$</td>
+                        <td>Đang vận chuyển</td>
+                    </tr>
+                    <tr>
+                        <td>Nendoroid Kusuriya no Hitorigoto Maomao</td>
+                        <td>Mô hình</td>
+                        <td>40$</td>
+                        <td>Đang vận chuyển</td>
+                    </tr>
+                    <tr>
+                        <td>Nendoroid Kusuriya no Hitorigoto Maomao</td>
+                        <td>Mô hình</td>
+                        <td>40$</td>
+                        <td>Thành công</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding-top: 20px;">
+                <h2>Đánh giá của khách về cửa hàng</h2>
+                <div class="rating-overview">
+                    <div class="rating-summary">
+                        <h1>4,2</h1>
+                        <div class="stars">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>☆</span> <!-- Ngôi sao trống cho phần đánh giá 4/5 -->
+                        </div>
+                        <p>1 N bài đánh giá</p>
+                    </div>
+                    <div class="rating-distribution">
+                        <div class="rating-bar">
+                            <span>5</span>
+                            <div class="bar">
+                                <div class="filled" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="rating-bar">
+                            <span>4</span>
+                            <div class="bar">
+                                <div class="filled" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="rating-bar">
+                            <span>3</span>
+                            <div class="bar">
+                                <div class="filled" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="rating-bar">
+                            <span>2</span>
+                            <div class="bar">
+                                <div class="filled" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                        <div class="rating-bar">
+                            <span>1</span>
+                            <div class="bar">
+                                <div class="filled" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-section" style="float: left;">
+                <div class="review">
+                    <div class="review-header">
+                        <div class="avatar" style="background-color: #f45c42;">G</div>
+                        <div class="review-info">
+                            <h3>Gia Huy Pham</h3>
+                            <div class="stars">
+                                ★★☆☆☆
+                            </div>
+                            <p class="review-date">3 tháng 10, 2024</p>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <p>Hàng đẹp nhưng mà là giả</p>
+                    </div>
+                    <div class="review-footer">
+                        <p>Nội dung có mang tính xây dựng không?</p>
+                        <button>Có</button>
+                        <button>Không</button>
+                    </div>
+                </div>
 
+                <div class="review">
+                    <div class="review-header">
+                        <div class="avatar" style="background-color: #4caf50;">T</div>
+                        <div class="review-info">
+                            <h3>Thuy Thanh</h3>
+                            <div class="stars">
+                                ★★★★☆
+                            </div>
+                            <p class="review-date">29 tháng 7, 2024</p>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <p>Anh Thương bán hàng đẹp trai</p>
+                    </div>
+                    <div class="review-footer">
+                        <p>Nội dung có mang tính xây dựng không?</p>
+                        <button>Có</button>
+                        <button>Không</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </div>
