@@ -218,3 +218,8 @@
 .comments {
     border-color: var(--bs-light)!important;
 }
+
+/*thống kê*/
+.rating-bar span {
+    color: var(--bs-light) !important;
+}
