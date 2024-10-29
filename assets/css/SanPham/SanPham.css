@@ -1,5 +1,7 @@
 .main-content {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 10px;
 }
 
@@ -11,7 +13,7 @@ a:has(.items) {
 
 .items {
     position: relative;
-    width: 100%;
+    width: 80vw;
     height: 100%;
     padding: 1rem;
     border-radius: 1rem;
@@ -44,4 +46,10 @@ a:has(.items) {
     position: absolute;
     bottom: 0;
     color: var(--primary-color);
+}
+
+@media (min-width: 690px) {
+    .items {
+        width: 300px;
+    }
 }

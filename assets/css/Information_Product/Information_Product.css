@@ -31,7 +31,7 @@ article {
 .images > img {
     height: calc(100vw - 1rem);
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     max-height: 500px;
 }

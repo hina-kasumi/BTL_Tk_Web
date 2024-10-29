@@ -2,32 +2,38 @@ const id = localStorage.getItem('productID');
 console.log(localStorage.getItem('productID'));
 
 function back() {
-    history.back();
+    location.href="SanPham.html";
 }
 
 function initImages() {
     const main_img = document.getElementsByClassName('main-img');
-    main_img[0].src = 'assets/img/Product_imgs/Product' + id + '/img_0.png';
-    const list_img = document.querySelectorAll('.list-images > img');
-    for (let i = 0; i < list_img.length; i++) {
-        list_img[i].src = 'assets/img/Product_imgs/Product' + id + '/img_' + i + '.png';
+    if (main_img.length) {
+        main_img[0].src = 'assets/img/Product_imgs/Product' + id + '/img_0.png';
+        const list_img = document.querySelectorAll('.list-images > img');
+        for (let i = 0; i < list_img.length; i++) {
+            list_img[i].src = 'assets/img/Product_imgs/Product' + id + '/img_' + i + '.png';
+        }
+    }
+}
+
+function initInfoProduct() {
+    const product = document.getElementById('info-side');
+    if (product) {
+        const product_info = 'product' + id;
+        const info_saved = localStorage.getItem(product_info);
+        if (info_saved) {
+            const info = localStorage.getItem(product_info).split('/');
+            if (info[0] !== "")
+                product.querySelector('h2').innerText = info[0];
+            if (info[1] !== "")
+                product.querySelector('h3 > span').innerText = info[1];
+            if (info[2] !== "")
+                product.querySelector('div').innerText = info[2];
+        }
     }
 }
 
 initImages();
-
-function initInfoProduct (){
-    const product = document.getElementById('info-side');
-    const product_info = 'product' + id;
-    const info_saved = localStorage.getItem(product_info);
-    if (info_saved) {
-        const info = localStorage.getItem(product_info).split('/');
-        product.querySelector('h2').innerText = info[0];
-        product.querySelector('h3 > span').innerText = info[1];
-        product.querySelector('div').innerText = info[2];
-    }
-}
-
 initInfoProduct();
 
 
@@ -66,18 +72,21 @@ initInfoProduct();
     })
 }
 
-function display(idName) {
-    const elem = document.getElementById(idName);
-    if (elem.classList.contains('d-flex'))
-        elem.classList.remove('d-flex');
-    else
-        elem.classList.add('d-flex');
-}
 
+// thay đổi thông tin sản phẩm
 function changeInfo(e) {
     const nameProduct = e.target['name-product'].value;
     const priceProduct = e.target['price-product'].value;
     const desProduct = e.target['des-product'].value;
     const product_info = 'product' + id;
     localStorage.setItem(product_info, nameProduct + '/' + priceProduct + '/' + desProduct);
+}
+
+// hiển thị bảng chỉnh sửa thông tin sản phẩm
+function display(idName) {
+    const elem = document.getElementById(idName);
+    if (elem.classList.contains('d-flex'))
+        elem.classList.remove('d-flex');
+    else
+        elem.classList.add('d-flex');
 }
