@@ -35,6 +35,9 @@ a:has(.items) {
 
 .items__head {
     color: var(--bs-dark);
+    height: 3rem;
+    line-height:1.5rem;
+    overflow: hidden;
 }
 
 .items__num {
