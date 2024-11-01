@@ -21,7 +21,7 @@ function initInfoProduct() {
     if (product) {
         const product_info = 'product' + id;
         const info_saved = localStorage.getItem(product_info);
-        if (info_saved) {
+        if (info_saved !== "//" && info_saved) {
             const info = localStorage.getItem(product_info).split('/');
             if (info[0] !== "")
                 product.querySelector('h2').innerText = info[0];
@@ -29,8 +29,20 @@ function initInfoProduct() {
                 product.querySelector('h3 > span').innerText = info[1];
             if (info[2] !== "")
                 product.querySelector('div').innerText = info[2];
+        } else {
+            const data = getData(id).then(data => {
+                console.log(data);
+                product.querySelector('h2').innerText = data["ProductName"];
+                product.querySelector('h3 > span').innerText = data["ProductPrice"];
+                product.querySelector('div').innerText = data["ProductDes"];
+            });
         }
     }
+}
+
+async function getData(id) {
+    let x = await fetch("resources/ProductData.json");
+    return JSON.parse(await x.text())[id];
 }
 
 initImages();

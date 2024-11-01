@@ -21,6 +21,7 @@ article {
 
 .product > div {
     flex: 1;
+    height: fit-content;
 }
 
 .images {
