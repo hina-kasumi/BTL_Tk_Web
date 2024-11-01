@@ -1,0 +1,330 @@
+[
+  {
+    "maHoaDon": "0000001",
+    "Ngay": "01/10/2024",
+    "KhachHang": "Nguyễn Văn A",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 20000000,
+    "ThanhTien": 19000000
+  },
+  {
+    "maHoaDon": "0000002",
+    "Ngay": "02/10/2024",
+    "KhachHang": "Trần Thị B",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 50000000,
+    "ThanhTien": 48000000
+  },
+  {
+    "maHoaDon": "0000003",
+    "Ngay": "03/10/2024",
+    "KhachHang": "Lê Văn C",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 15000000,
+    "ThanhTien": 14000000
+  },
+  {
+    "maHoaDon": "0000004",
+    "Ngay": "04/10/2024",
+    "KhachHang": "Phạm Thị D",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 30000000,
+    "ThanhTien": 29000000
+  },
+  {
+    "maHoaDon": "0000005",
+    "Ngay": "05/10/2024",
+    "KhachHang": "Đặng Văn E",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 25000000,
+    "ThanhTien": 24000000
+  },
+  {
+    "maHoaDon": "0000006",
+    "Ngay": "06/10/2024",
+    "KhachHang": "Bùi Thị F",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 12000000,
+    "ThanhTien": 11500000
+  },
+  {
+    "maHoaDon": "0000007",
+    "Ngay": "07/10/2024",
+    "KhachHang": "Ngô Văn G",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 60000000,
+    "ThanhTien": 58000000
+  },
+  {
+    "maHoaDon": "0000008",
+    "Ngay": "08/10/2024",
+    "KhachHang": "Vũ Thị H",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 40000000,
+    "ThanhTien": 39000000
+  },
+  {
+    "maHoaDon": "0000009",
+    "Ngay": "09/10/2024",
+    "KhachHang": "Mai Văn I",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 70000000,
+    "ThanhTien": 68000000
+  },
+  {
+    "maHoaDon": "0000010",
+    "Ngay": "10/10/2024",
+    "KhachHang": "Hoàng Thị J",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 35000000,
+    "ThanhTien": 34000000
+  },
+  {
+    "maHoaDon": "0000011",
+    "Ngay": "11/10/2024",
+    "KhachHang": "Nguyễn Văn K",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 45000000,
+    "ThanhTien": 44000000
+  },
+  {
+    "maHoaDon": "0000012",
+    "Ngay": "12/10/2024",
+    "KhachHang": "Trần Thị L",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 32000000,
+    "ThanhTien": 31000000
+  },
+  {
+    "maHoaDon": "0000013",
+    "Ngay": "13/10/2024",
+    "KhachHang": "Lê Văn M",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 55000000,
+    "ThanhTien": 54000000
+  },
+  {
+    "maHoaDon": "0000014",
+    "Ngay": "14/10/2024",
+    "KhachHang": "Phạm Thị N",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 30000000,
+    "ThanhTien": 29000000
+  },
+  {
+    "maHoaDon": "0000015",
+    "Ngay": "15/10/2024",
+    "KhachHang": "Đặng Văn O",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 60000000,
+    "ThanhTien": 58000000
+  },
+  {
+    "maHoaDon": "0000016",
+    "Ngay": "16/10/2024",
+    "KhachHang": "Bùi Thị P",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 75000000,
+    "ThanhTien": 74000000
+  },
+  {
+    "maHoaDon": "0000017",
+    "Ngay": "17/10/2024",
+    "KhachHang": "Ngô Văn Q",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 50000000,
+    "ThanhTien": 49000000
+  },
+  {
+    "maHoaDon": "0000018",
+    "Ngay": "18/10/2024",
+    "KhachHang": "Vũ Thị R",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 85000000,
+    "ThanhTien": 84000000
+  },
+  {
+    "maHoaDon": "0000019",
+    "Ngay": "19/10/2024",
+    "KhachHang": "Mai Văn S",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 40000000,
+    "ThanhTien": 39000000
+  },
+  {
+    "maHoaDon": "0000020",
+    "Ngay": "20/10/2024",
+    "KhachHang": "Hoàng Thị T",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 90000000,
+    "ThanhTien": 89000000
+  },
+  {
+    "maHoaDon": "0000021",
+    "Ngay": "21/10/2024",
+    "KhachHang": "Nguyễn Văn U",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 30000000,
+    "ThanhTien": 29000000
+  },
+  {
+    "maHoaDon": "0000022",
+    "Ngay": "22/10/2024",
+    "KhachHang": "Trần Thị V",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 47000000,
+    "ThanhTien": 46000000
+  },
+  {
+    "maHoaDon": "0000023",
+    "Ngay": "23/10/2024",
+    "KhachHang": "Lê Văn W",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 35000000,
+    "ThanhTien": 34000000
+  },
+  {
+    "maHoaDon": "0000024",
+    "Ngay": "24/10/2024",
+    "KhachHang": "Phạm Thị X",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 42000000,
+    "ThanhTien": 41000000
+  },
+  {
+    "maHoaDon": "0000025",
+    "Ngay": "25/10/2024",
+    "KhachHang": "Đặng Văn Y",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 60000000,
+    "ThanhTien": 59000000
+  },
+  {
+    "maHoaDon": "0000026",
+    "Ngay": "26/10/2024",
+    "KhachHang": "Bùi Thị Z",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 30000000,
+    "ThanhTien": 29000000
+  },
+  {
+    "maHoaDon": "0000027",
+    "Ngay": "27/10/2024",
+    "KhachHang": "Ngô Văn AA",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 55000000,
+    "ThanhTien": 54000000
+  },
+  {
+    "maHoaDon": "0000028",
+    "Ngay": "28/10/2024",
+    "KhachHang": "Vũ Thị BB",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 45000000,
+    "ThanhTien": 44000000
+  },
+  {
+    "maHoaDon": "0000029",
+    "Ngay": "29/10/2024",
+    "KhachHang": "Mai Văn CC",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 70000000,
+    "ThanhTien": 69000000
+  },
+  {
+    "maHoaDon": "0000030",
+    "Ngay": "30/10/2024",
+    "KhachHang": "Hoàng Thị DD",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 80000000,
+    "ThanhTien": 79000000
+  },
+  {
+    "maHoaDon": "0000031",
+    "Ngay": "31/10/2024",
+    "KhachHang": "Nguyễn Văn EE",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 25000000,
+    "ThanhTien": 24000000
+  },
+  {
+    "maHoaDon": "0000032",
+    "Ngay": "01/11/2024",
+    "KhachHang": "Trần Thị FF",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 30000000,
+    "ThanhTien": 29000000
+  },
+  {
+    "maHoaDon": "0000033",
+    "Ngay": "02/11/2024",
+    "KhachHang": "Lê Văn GG",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 47000000,
+    "ThanhTien": 46000000
+  },
+  {
+    "maHoaDon": "0000034",
+    "Ngay": "03/11/2024",
+    "KhachHang": "Phạm Thị HH",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 60000000,
+    "ThanhTien": 59000000
+  },
+  {
+    "maHoaDon": "0000035",
+    "Ngay": "04/11/2024",
+    "KhachHang": "Đặng Văn II",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 52000000,
+    "ThanhTien": 51000000
+  },
+  {
+    "maHoaDon": "0000036",
+    "Ngay": "05/11/2024",
+    "KhachHang": "Bùi Thị JJ",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 39000000,
+    "ThanhTien": 38000000
+  },
+  {
+    "maHoaDon": "0000037",
+    "Ngay": "06/11/2024",
+    "KhachHang": "Ngô Văn KK",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 43000000,
+    "ThanhTien": 42000000
+  },
+  {
+    "maHoaDon": "0000038",
+    "Ngay": "07/11/2024",
+    "KhachHang": "Vũ Thị LL",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 60000000,
+    "ThanhTien": 59000000
+  },
+  {
+    "maHoaDon": "0000039",
+    "Ngay": "08/11/2024",
+    "KhachHang": "Mai Văn MM",
+    "TrangThai": "đã giao hàng",
+    "TongTien": 70000000,
+    "ThanhTien": 69000000
+  },
+  {
+    "maHoaDon": "0000040",
+    "Ngay": "09/11/2024",
+    "KhachHang": "Hoàng Thị NN",
+    "TrangThai": "đang giao hàng",
+    "TongTien": 85000000,
+    "ThanhTien": 84000000
+  },
+  {
+    "maHoaDon": "0000012",
+    "Ngay": "12/10/2024",
+    "KhachHang": "Trần Thị L",
+    "TrangThai": "đang chờ giao",
+    "TongTien": 32000000,
+    "ThanhTien": 31000000
+  }
+]

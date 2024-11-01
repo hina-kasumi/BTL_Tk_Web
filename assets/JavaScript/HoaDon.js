@@ -55,21 +55,38 @@ function overflowData(command) {
     }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    overflowData();
-});
+// window.addEventListener('DOMContentLoaded', () => {
+//     overflowData();
+// });
 
 
-//generate data for table in HoaDon
-for (let i = 0; i < 50; i++) {
-    document.querySelector('tbody').innerHTML +=
-        "<tr>\n" +
-        "<td><input type=\"checkbox\"></td>\n" +
-        "<td> " + i + "</td>\n" +
-        "<td>28/9/2024</td>\n" +
-        "<td>hiếu hiếu</td>\n" +
-        "<td>đang giao hàng</td>\n" +
-        "<td>100.000.000</td>\n" +
-        "<td>90.000.000</td>\n" +
-        "</tr>"
+async function generateData() {
+    await getData().then(data => {
+        data.forEach((item) => {
+            document.querySelector('tbody').innerHTML +=
+                "<tr>\n" +
+                "<td><input type=\"checkbox\"></td>\n" +
+                "<td> " + item["maHoaDon"] + "</td>\n" +
+                "<td>" + item["Ngay"] + "</td>\n" +
+                "<td>" + item["KhachHang"] + "</td>\n" +
+                "<td>" + item["TrangThai"] + "</td>\n" +
+                "<td>" + item["TongTien"] + "</td>\n" +
+                "<td>" + item["ThanhTien"] + "</td>\n" +
+                "</tr>";
+            overflowData();
+        })
+    })
+}
+
+generateData().then(() => {
+    console.log('generated data');
+})
+    .catch((error) => {
+        console.log(error)
+    })
+
+
+async function getData() {
+    let x = await fetch("resources/HoaDonData.json");
+    return JSON.parse(await x.text());
 }

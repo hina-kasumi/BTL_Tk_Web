@@ -2,7 +2,7 @@ const id = localStorage.getItem('productID');
 console.log(localStorage.getItem('productID'));
 
 function back() {
-    location.href="SanPham.html";
+    location.href = "SanPham.html";
 }
 
 function initImages() {
@@ -21,22 +21,23 @@ function initInfoProduct() {
     if (product) {
         const product_info = 'product' + id;
         const info_saved = localStorage.getItem(product_info);
-        if (info_saved !== "//" && info_saved) {
-            const info = localStorage.getItem(product_info).split('/');
-            if (info[0] !== "")
-                product.querySelector('h2').innerText = info[0];
-            if (info[1] !== "")
-                product.querySelector('h3 > span').innerText = info[1];
-            if (info[2] !== "")
-                product.querySelector('div').innerText = info[2];
-        } else {
-            const data = getData(id).then(data => {
-                console.log(data);
-                product.querySelector('h2').innerText = data["ProductName"];
-                product.querySelector('h3 > span').innerText = data["ProductPrice"];
-                product.querySelector('div').innerText = data["ProductDes"];
-            });
-        }
+        const data = getData(id).then(data => {
+            console.log(data);
+            product.querySelector('h2').innerText = data["ProductName"];
+            product.querySelector('h3 > span').innerText = data["ProductPrice"];
+            product.querySelector('div').innerText = data["ProductDes"];
+            product.querySelector('.da-ban').innerHTML = data["DaBan"];
+            product.querySelector('.danh-gia').innerHTML = data["DanhGia"];
+            if (info_saved) {
+                const info = localStorage.getItem(product_info).split('/');
+                if (info[0] !== "")
+                    product.querySelector('h2').innerText = info[0];
+                if (info[1] !== "")
+                    product.querySelector('h3 > span').innerText = info[1];
+                if (info[2] !== "")
+                    product.querySelector('div').innerText = info[2];
+            }
+        });
     }
 }
 

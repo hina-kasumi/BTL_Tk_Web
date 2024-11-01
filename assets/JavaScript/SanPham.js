@@ -7,19 +7,20 @@ async function initAllProducts() {
         const imgs = items[i].getElementsByClassName('items__img');
         const product_info = 'product' + i;
         const info_saved = localStorage.getItem(product_info);
-        if (info_saved !== "//" && info_saved) {
-            const info = localStorage.getItem(product_info).split('/');
-            if (info[0] !== "")
-                items[i].querySelector('.items__head').innerText = info[0];
-            if (info[1] !== "")
-                items[i].querySelector('.items__price > span').innerText = info[1];
-        } else {
-            const data = getData(i);
-            data.then(data => {
-                items[i].querySelector('.items__head').innerText = data["ProductName"];
-                items[i].querySelector('.items__price > span').innerText = data["ProductPrice"];
-            });
-        }
+        const data = getData(i);
+        data.then(data => {
+            items[i].querySelector('.items__head').innerText = data["ProductName"];
+            items[i].querySelector('.items__price > span').innerText = data["ProductPrice"];
+            items[i].querySelector('.items__num').innerText = "Đã bán: " + data["DaBan"];
+            // console.log(data["DaBan"]);
+            if (info_saved !== "//" && info_saved) {
+                const info = localStorage.getItem(product_info).split('/');
+                if (info[0] !== "")
+                    items[i].querySelector('.items__head').innerText = info[0];
+                if (info[1] !== "")
+                    items[i].querySelector('.items__price > span').innerText = info[1];
+            }
+        });
         try {
             imgs[0].src = 'assets/img/Product_imgs/Product' + i + '/img_0.png';
 
@@ -34,5 +35,9 @@ async function getData(id) {
     return JSON.parse(await x.text())[id];
 }
 
-initAllProducts().then(() => {console.log('Khởi tạo sản phẩm thành công');})
-    .catch((error) => {console.error('Lỗi khi khởi tạo sản phẩm:', error);});
+initAllProducts().then(() => {
+    console.log('Khởi tạo sản phẩm thành công');
+})
+    .catch((error) => {
+        console.error('Lỗi khi khởi tạo sản phẩm:', error);
+    });
